@@ -1,0 +1,18 @@
+// Standardize stylesheet
+@import '../scss/reset';
+
+// Variables
+@import '../scss/base';
+@import '../scss/variables';
+
+// Media Sizes
+@import '../scss/media';
+
+// Background Style
+@import '../scss/background';
+
+// NavBar
+@import '../scss/nav';
+
+// Main Page
+@import '../scss/main';

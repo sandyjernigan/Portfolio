@@ -1,6 +1,6 @@
 <script>
 	export let name;
-	export let title;
+  export let title;
 </script>
 
 <div>
