@@ -1,8 +1,13 @@
 // Standardize stylesheet
 @import '../scss/reset';
 
-// Variables
+// Fonts
+@import '../scss/fonts';
+
+// Set Base Fonts and Colors
 @import '../scss/base';
+
+// Variables
 @import '../scss/variables';
 
 // Media Sizes
