@@ -17,19 +17,12 @@
 </div>
 
 <style>
-  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
   .background {
     position: absolute;
     width: 100%;
     left: 0px;
     top: 0px;
     z-index: -1;
-  }
-  p {
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1px;
-    font-size: 14px;
-    color: #333333;
   }
   .header {
     position: relative;
@@ -78,9 +71,6 @@
     .waves {
       height: 40px;
       min-height: 40px;
-    }
-    .content {
-      height: 30vh;
     }
   }
 </style>

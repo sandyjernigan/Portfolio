@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "sass": "^1.26.8",
     "sirv-cli": "^0.4.4"
   }
 }

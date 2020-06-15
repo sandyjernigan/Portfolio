@@ -1,0 +1,50 @@
+// main: main.scss
+
+// Variables
+
+// Responsive
+$mobile: "max-width: 500px";
+$tablet: "max-width: 800px";
+$medium: "max-width: 999px"; // Medium to Large Views 
+  // 1000px or > Large Desktop
+
+// Container Width
+$container-sm: '96%';
+$container-md: '92%';
+$container-lg: '800px';
+
+// Color Schemes
+
+  // Complement
+  $color-complement: adjust-hue($color-base, 180);
+
+  // Triadic structure
+  $triadic-secondary: adjust-hue($color-base, -(360 / 3));
+  $triadic-tertiary: adjust-hue($color-base, (360 / 3));
+
+  // Mixing Colors
+  $color-primary: mix($color-base, red);
+  $color-secondary: mix($color-base, green);
+  $color-tertiary: mix($color-base, $color-bg);
+
+  // Shade Colors
+  $color-lighten: lighten($color-base, 10%);
+  $color-lighten2: lighten($color-base, 20%);
+  $color-lighten3: lighten($color-base, 30%);
+  $color-lighten4: lighten($color-base, 40%);
+  $color-lighten5: lighten($color-base, 50%);
+  $color-lighten6: lighten($color-base, 60%);
+  $color-lighten7: lighten($color-base, 70%);
+  $color-lighten8: lighten($color-base, 80%);
+  $color-lighten9: lighten($color-base, 90%);
+  $color-darken: darken($color-base, 10%);
+  $color-darker: darken($color-base, 20%);
+  $color-darker-bg: darken($color-bg, 20%);
+
+  // Saturation
+  $color-saturate: saturate($color-base, 10%);
+  $color-desaturate: desaturate($color-base, 10%);
+  $color-lightness: lighten(desaturate($color-base, 100%), 30%);
+
+  // Contrast
+  $color-contrast: contrast($color-base);
