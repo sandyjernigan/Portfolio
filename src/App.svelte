@@ -1,13 +1,13 @@
 <script>
-	import Background from './Background.svelte'
-	import Title from './Title.svelte'
-	import Quote from './Quote.svelte'
-	import Contact from './Contact.svelte'
-	import Portfolio from './Portfolio.svelte'
-	import Profile from './Profile.svelte'
-	import Employment from './Employment.svelte'
-	import Education from './Education.svelte'
-	import References from './References.svelte'
+	import Background from './components/Background.svelte'
+	import Title from './components/Title.svelte'
+	import Quote from './components/Quote.svelte'
+	import Contact from './components/Contact.svelte'
+	import Portfolio from './components/Portfolio.svelte'
+	import Profile from './components/Profile.svelte'
+	import Employment from './components/Employment.svelte'
+	import Education from './components/Education.svelte'
+	import References from './components/References.svelte'
 	
 	import { info } from './info.js';
 

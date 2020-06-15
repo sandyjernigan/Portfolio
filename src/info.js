@@ -8,7 +8,3 @@ export const info = {
     quoteby: "Printer's Ink, December 1921"
   }
 }
-
-export const styles = {
-  primaryColor: "cornflowerblue"
-}
