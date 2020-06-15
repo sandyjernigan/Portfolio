@@ -2,7 +2,6 @@
 	import Background from './components/Background.svelte'
 	import Title from './components/Title.svelte'
 	import Quote from './components/Quote.svelte'
-	import Contact from './components/Contact.svelte'
 	import Portfolio from './components/Portfolio.svelte'
 	import Profile from './components/Profile.svelte'
 	import Employment from './components/Employment.svelte'
@@ -14,14 +13,13 @@
 </script>
 
 <main>
-	<Title {...info.titleContent} />
-	<Quote {...info.quoteContent} />
-	<Contact />
+	<Title {...info.title} />
+	<Quote {...info.quote} />
 	<Portfolio />
-	<Profile />
+	<!-- <Profile />
 	<Employment />
 	<Education />
-	<References />	
+	<References />	 -->
 </main>
 <Background />
 
