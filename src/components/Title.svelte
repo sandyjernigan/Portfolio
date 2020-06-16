@@ -21,7 +21,9 @@
 
 		<div class="contact">
 			<div class="follow">
-				<span>Please Follow Me:</span>
+				Please Follow Me:
+			</div>
+			<div class="icons">
 				<a href={github}>
 					<i class="fab fa-github"></i></a>
 				<a href={linkedin}>
@@ -41,6 +43,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-top: 1rem;
 	}
 
 	.titleContent, .profileImage {
@@ -48,17 +51,18 @@
 	}
 
 	h1 {
-		font-family: cursive;
 		font-size: 3rem;
 		font-weight: 300;
 		letter-spacing: 2px;
 		line-height: 4rem;
+		padding: 1rem 2rem;
 	}
 
 	p {
 		font-size: 1.5rem;
 		font-weight: 200;
 		margin-top: -0.5rem;
+		padding: 0.5rem;
 	}
 
 	img {
@@ -67,10 +71,18 @@
 		border-radius: 100px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 	}
-	.follow span{
-		color: midnightblue;
-		padding-right: 0.5rem;
+
+	.contact {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+
+	.follow {
+		color: midnightblue;
+		padding: 0 0.5rem 0.5rem 0;
+	}
+
 	i {
 		color: midnightblue;
 		font-size: 1.1rem;
@@ -79,6 +91,33 @@
 	i:hover {
 		color: royalblue;
 		transform: scale(1.5);
+	}
+
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+		.title {
+			display:block;
+		}
+		.titleContent, .profileImage {
+			padding: 0.1rem;
+		}
+		h1 {
+			font-size: 1.5rem;
+			font-weight: 300;
+			letter-spacing: 1.5px;
+			line-height: 2rem;
+			padding: 0.5rem 1rem;
+		}
+		p {
+			font-size: 1rem;
+			font-weight: 200;
+			padding: 0.5rem;
+		}
+		.contact {
+			display: block;
+			font-size: .8rem;
+			padding-bottom: 1rem;
+		}
 	}
 
 </style>

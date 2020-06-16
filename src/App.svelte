@@ -1,4 +1,5 @@
 <script>
+	import CSS from './styles/Styles.svelte'
 	import Background from './components/Background.svelte'
 	import Title from './components/Title.svelte'
 	import Quote from './components/Quote.svelte'
@@ -10,9 +11,17 @@
 	
 	import { info } from './info.js';
 
+	// Set Fonts
+	import HeaderFont from './fonts/headers/MeriendaOne.svelte'
+
 </script>
 
+<svelte:head>
+    <link rel="stylesheet" href="./css/global.css">
+</svelte:head>
+
 <main>
+	<HeaderFont />
 	<Title {...info.title} />
 	<Quote {...info.quote} />
 	<Portfolio />
@@ -21,6 +30,7 @@
 	<Education />
 	<References />	 -->
 </main>
+
 <Background />
 
 <style>
@@ -37,4 +47,14 @@
 			max-width: none;
 		}
 	}
+
+  @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
+
+  :global(h1) {
+    font-family: 'Merienda One', cursive;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 2px;
+		line-height: 4rem;
+  }
 </style>

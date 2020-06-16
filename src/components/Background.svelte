@@ -27,7 +27,7 @@
   .header {
     position: relative;
     text-align: center;
-    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    background: linear-gradient(60deg, rgb(64, 77, 195) 0%, rgba(0, 172, 193, 1) 100%);
   }
   .waves {
     position: relative;
@@ -69,8 +69,8 @@
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
     .waves {
-      height: 40px;
-      min-height: 40px;
+      height: 80px;
+      min-height: 80px;
     }
   }
 </style>
