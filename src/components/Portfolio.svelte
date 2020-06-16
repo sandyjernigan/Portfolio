@@ -8,8 +8,16 @@
 
 <style>
 	p {
-		color: darkred;
+		color: red;
+		filter: grayscale(50%);
 		font-weight: bold;
 		font-size: 3rem;
+	}
+
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+		p {
+			font-size: 1.2rem;
+		}
 	}
 </style>

@@ -75,21 +75,20 @@
 	.contact {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: baseline;
 	}
 
 	.follow {
-		color: midnightblue;
-		padding: 0 0.5rem 0.5rem 0;
+		padding: 0.5rem 1rem 1rem 0;
+		font-size: 0.9rem;
 	}
 
 	i {
-		color: midnightblue;
-		font-size: 1.1rem;
-		letter-spacing: 1.2rem;
+		filter: grayscale(90%);
+		letter-spacing: 1.1rem;
 	}
 	i:hover {
-		color: royalblue;
+		filter: grayscale(5%);
 		transform: scale(1.5);
 	}
 
@@ -116,7 +115,6 @@
 		.contact {
 			display: block;
 			font-size: .8rem;
-			padding-bottom: 1rem;
 		}
 	}
 

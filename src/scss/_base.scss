@@ -1,10 +1,13 @@
 // Color Scheme
-$color-base: MidnightBlue;
-$color-light: lighten($color-base, 30%);
-$color-bg: FloralWhite;
+$color-base: #EBEDEF;
+$color-bg: #212F3D;
+$color-light: lighten($color-bg, 60%);
 
 // Font
-  body { color: $color-base; }
+  body { color: $color-light; }
+  .bg-color {
+    background-color: $color-bg;
+  }
 
   // Header Font
   @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
