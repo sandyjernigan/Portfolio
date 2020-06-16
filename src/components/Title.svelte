@@ -84,12 +84,13 @@
 	}
 
 	i {
-		filter: grayscale(90%);
+		color: white;
+		filter:opacity(20%);
 		letter-spacing: 1.1rem;
 	}
 	i:hover {
-		filter: grayscale(5%);
 		transform: scale(1.5);
+		filter:opacity(60%);
 	}
 
   /*Shrinking for mobile*/

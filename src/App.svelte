@@ -11,9 +11,6 @@
 	
 	import { info } from './info.js';
 
-	// Set Fonts
-	import HeaderFont from './fonts/headers/MeriendaOne.svelte'
-
 </script>
 
 <svelte:head>
@@ -21,7 +18,6 @@
 </svelte:head>
 
 <main>
-	<HeaderFont />
 	<Title {...info.title} />
 	<Quote {...info.quote} />
 	<Portfolio />
