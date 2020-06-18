@@ -1,5 +1,7 @@
 <script>
 	import CSS from './styles/Styles.svelte'
+	import Menu from './components/Menu.svelte'
+	import DarkModeButton from './components/DarkModeButton.svelte'
 	import Background from './components/Background.svelte'
 	import Title from './components/Title.svelte'
 	import Quote from './components/Quote.svelte'
@@ -11,25 +13,45 @@
 	
 	import { info } from './info.js';
 
+	// Start with Dark Mode On
+	window.document.body.classList.add('dark-mode')
+
 </script>
 
 <svelte:head>
     <link rel="stylesheet" href="./css/global.css">
 </svelte:head>
 
-<main>
-	<Title {...info.title} />
-	<Quote {...info.quote} />
-	<Portfolio />
-	<!-- <Profile />
-	<Employment />
-	<Education />
-	<References />	 -->
-</main>
+<div class="page">
+	<Menu />
+	
+  <main class="content">
+		<div class="content_inner">
+			<Title {...info.title} />
+			<DarkModeButton>Dark Mode Toggle</DarkModeButton>
+			<!-- <Quote {...info.quote} />
+			<Portfolio /> -->
+			<!-- <Profile />
+			<Employment />
+			<Education />
+			<References />	 -->
+		</div>
+	</main>
+</div>
 
 <Background />
 
-<style>
+<style type="text/scss">
+
+	:global(body){
+		background-color: #EBEDEF;
+		color: #212F3D;
+	}
+	:global(body.dark-mode){
+		background-color: #212F3D;
+		color:#EBEDEF;
+	}
+
 	main {
 		z-index: 5;
 		text-align: center;
@@ -46,11 +68,4 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
 
-  :global(h1) {
-    font-family: 'Merienda One', cursive;
-		font-size: 3rem;
-		font-weight: 300;
-		letter-spacing: 2px;
-		line-height: 4rem;
-  }
 </style>

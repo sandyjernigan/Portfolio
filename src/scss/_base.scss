@@ -1,32 +1,32 @@
 // Color Scheme
-$color-base: #EBEDEF;
-$color-bg: #212F3D;
-$color-light: lighten($color-bg, 60%);
+$color-base: #212F3D;
+$color-bg: #EBEDEF;
+$color-light: lighten($color-base, 60%);
+
+$dark-color-base: #EBEDEF;
+$dark-color-bg: #212F3D;
+$dark-color-light: lighten($color-bg, 60%);
+
 
 // Font
-  body { color: $color-light; }
-  .bg-color {
-    background-color: $color-bg;
-  }
+  // // Header Font
+  // @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
+  // $headerFont: 'Merienda One', cursive;
+  // h1 { font-family: $headerFont; }
 
-  // Header Font
-  @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
-  $headerFont: 'Merienda One', cursive;
-  h1 { font-family: $headerFont; }
-
-  // Body Font
-  @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700');
-  $bodyFont: 'Assistant', sans-serif;
-  body { font-family: $bodyFont; }
+  // // Body Font
+  // @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700');
+  // $bodyFont: 'Assistant', sans-serif;
+  // body { font-family: $bodyFont; }
   
-  // Quote Font
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700');
-  $quoteFont: 'Caveat', cursive;
+  // // Quote Font
+  // @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700');
+  // $quoteFont: 'Caveat', cursive;
 
-  // Quote Author
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1');
-  $quoteAuthor: 'IBM Plex Serif', sans-serif;
+  // // Quote Author
+  // @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1');
+  // $quoteAuthor: 'IBM Plex Serif', sans-serif;
 
-  // Signed
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700');
-  $SignFont: 'Dancing Script', cursive;
+  // // Signed
+  // @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700');
+  // $SignFont: 'Dancing Script', cursive;

@@ -39,6 +39,8 @@
 </div>
 
 <style>
+	h1 { font-family: 'Merienda One', cursive; }
+
 	.title {
 		display: flex;
 		justify-content: center;
