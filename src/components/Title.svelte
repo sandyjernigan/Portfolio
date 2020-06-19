@@ -8,7 +8,7 @@
 	export let twitter;
 </script>
 
-<div class="title">
+<div id="title">
 	
 	<div class="profileImage">
 		<img src={profileImg} alt="Profile" />
@@ -38,10 +38,10 @@
 
 </div>
 
-<style>
+<style type="text/scss">
 	h1 { font-family: 'Merienda One', cursive; }
 
-	.title {
+	#title {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -97,7 +97,7 @@
 
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
-		.title {
+		#title {
 			display:block;
 		}
 		.titleContent, .profileImage {

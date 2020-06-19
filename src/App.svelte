@@ -19,8 +19,9 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </svelte:head>
+<CSS />
 
 <div class="page">
 	<Menu />

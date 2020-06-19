@@ -14,6 +14,9 @@ function toggle() {
 		border-radius: 4px;
 		padding: 0.5rem;
 		text-transform: uppercase;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
 		
 	}
 	:global(body.dark-mode) button {
