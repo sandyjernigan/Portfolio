@@ -1,32 +1,15 @@
 <script>
   import { onMount } from 'svelte';
-  
-	onMount(() => {
-    let page = document.getElementById('page');
-    let nav = document.getElementsByTagName('nav');
-  });
+	import { viewMenu, darkmode } from '../styles.js'
 
   // Menu click event
   function handleMenuClick() { 
-    console.log("click")
-    page.toggleClass('shazam');
-    nav.toggleClass('shazam');
+    viewMenu.update(viewMenu => !viewMenu)
   };
-
-  // elements
-  // var page = $('.page');
-
-  // $('.menu_toggle').on('click', function(){
-  //   page.toggleClass('shazam');
-  // });
-
-  // $('.content').on('click', function(){
-  //   page.removeClass('shazam');
-  // });
 </script>
 
-<nav class="dark-mode">
-  <span class="menu_toggle" on:click={handleMenuClick}>
+<nav class:dark-mode={$darkmode} class:viewMenu={$viewMenu} on:click={handleMenuClick}>
+  <span class="menu_toggle">
     <i class="menu_open fa fa-bars fa-lg"></i>
     <i class="menu_close fa fa-times fa-lg"></i>
   </span>
@@ -39,19 +22,11 @@
 
 <style type="text/scss">
 	// Color Scheme
-	$color-base: #212F3D;
-	$color-bg: #EBEDEF;
-	$color-light: lighten($color-base, 60%);
-
-	$dark-color-base: #EBEDEF;
-	$dark-color-bg: #212F3D;
-  $dark-color-light: lighten($color-bg, 60%);
+  @import '../scss/colorscheme.scss';
   
-  $nav: $dark-color-bg;
   $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
   $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
-  /* basically all styling from now on */
   .menu_toggle {
     z-index: 900;
     position: fixed;
@@ -115,14 +90,14 @@
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: darken($color-base, 30%);
+      color: darken($dark-color-base, 30%);
       transition: color .2s;
       
       .icon {
         position: relative;
         display: inline-block;
         margin-right: 25px;
-        color: $color-base;
+        color: $dark-color-base;
 
         &:after {
           position: absolute;
@@ -135,22 +110,22 @@
           margin-left: -33px;
           margin-top: -32px;
           border-radius: 100%;
-          border: 2px solid $color-base;
+          border: 2px solid $dark-color-base;
           transition: border-color .2s;
         }
       }
       
       &:hover {
-        color: $color-base;
+        color: $dark-color-base;
         .icon {
           &:after {
-            border-color: $nav;
+            border-color: $dark-color-base;
           }
         }
       }
       &:active {
         .icon {
-          color: $nav;
+          color: $dark-color-base;
         }
       }
     }
@@ -163,33 +138,40 @@
         color: $dark-color-base;
       }
     }
+    .menu_items {
+      a {
+        color: darken($color-base, 30%);        
+        .icon {
+          color: $color-base;
+          &:after {
+            border: 2px solid $color-base;
+          }
+        }        
+        &:hover {
+          color: $color-base;
+          .icon {
+            &:after {
+              border-color: $color-base;
+            }
+          }
+        }
+        &:active {
+          .icon {
+            color: $color-base;
+          }
+        }
+      }
+    }
   }
 
   /* Let's open up the menu */
-  .shazam {
-    color: red;
-    .content {
-      color: red;
-      transform: rotate(-30deg);
-    }
-    
-    // this will show hidden content overflow when rotated,
-    // but will result in a jump, if you've already scrolled down the content
-    // plus, you will lose your current reading position
-    // fixable with JS, not gonna bother
-    
-    /*.content_inner {
-      height: 100%;
-    }*/
-    
+  nav.viewMenu {
     .menu_open {
-      color: red;
       transform: rotate(-20deg);
     }
     .menu_close {
       transform: rotate(0);
     }
-    
     .menu_items {
       li {
         transform: translateX(0);
@@ -204,5 +186,4 @@
       }
     }
   }
-
 </style>

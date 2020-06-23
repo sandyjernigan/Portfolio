@@ -6,17 +6,19 @@
 	import Employment from './Employment.svelte'
 	import Education from './Education.svelte'
 	import References from './References.svelte'
+	import { viewMenu } from '../styles.js'
 	
 	import { info } from '../info.js';
 	export let isDarkMode;
 </script>
 	
-<main class="content" class:dark-mode={isDarkMode}>
+<main class="content" class:dark-mode={isDarkMode} class:viewMenu={$viewMenu}>
   <div class="content_inner">
     <Title {...info.title} {isDarkMode} />
     <h1>The Dark Mode is {isDarkMode}</h1>
-    <!-- <Quote {...info.quote} />
-    <Portfolio /> -->
+    <br />
+    <Quote {...info.quote} />
+    <!-- <Portfolio /> -->
     <!-- <Profile />
     <Employment />
     <Education />
@@ -26,23 +28,9 @@
 
 <style type="text/scss">
   @import '../scss/colorscheme.scss';
-	// $color-base: #212F3D;
-	// $color-bg: #EBEDEF;
-	// $color-light: lighten($color-base, 60%);
-
-	// $dark-color-base: #EBEDEF;
-	// $dark-color-bg: #212F3D;
-	// $dark-color-light: lighten($color-bg, 60%);
 
 	// Nav Snap
 	$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
-
-	:global(body){
-		background-color: $color-bg;
-		color: $color-base;
-		height: 100%;
-		overflow: hidden;
-	}
 
 	main {
   	height: 100%;
@@ -76,6 +64,10 @@
 		
 		// styling
 		padding: 50px 20%;
+  }
+
+  .content.viewMenu {
+    transform: rotate(-30deg);
   }
   
 	// Dark Mode

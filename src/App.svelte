@@ -36,14 +36,6 @@
 	// Nav Snap
 	$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 
-
-	:global(body){
-		background-color: $color-bg;
-		color: $color-base;
-		height: 100%;
-		overflow: hidden;
-	}
-
 	// Fonts to use
 	@import url('https://fonts.googleapis.com/css2?family=Merienda+One');
 	
@@ -57,5 +49,4 @@
 			color: $dark-color-base;
 		}
 	}
-
 </style>

@@ -11,9 +11,10 @@
   let bgColor2 ="rgba(255,255,255,0.2)"
   let bgColor3 ="rgba(" + bgColor + ",0.3)"
   let bgColor4 ="rgba(" + bgColor + ",0.4)"
+  // }
 </script>
 
-<div class="bg-color" class:dark-mode={isDarkMode}>Test</div>
+<div class="bg-color" class:dark-mode={isDarkMode}></div>
 
 <div class="background">
   <!--Waves Container-->
@@ -38,7 +39,7 @@
   @import '../scss/colorscheme.scss';
 
   .bg-color {
-    background-color: $color-bg;
+    background-color: $dark-color-bg;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -49,7 +50,7 @@
     font-size: 15rem;
   }
   .dark-mode {
-    background-color: $dark-color-bg;
+    background-color: $color-bg;
   }
   .background {
     position: absolute;

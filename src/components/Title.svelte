@@ -10,7 +10,7 @@
 	import { darkmode } from '../styles.js'
 </script>
 
-<div id="title" class:dark-mode={isDarkMode}>
+<div id="title" class:dark-mode={$darkmode}>
 	
 	<div class="profileImage">
 		<img src={profileImg} alt="Profile" />
