@@ -6,9 +6,10 @@
 	import Background from './components/Background.svelte'
 	import { darkmode } from './styles.js'
 
-	// Start with Dark Mode On
+	// Check for Dark Mode
 	let isDarkMode;
 	const unsubscribe = darkmode.subscribe(value =>  isDarkMode = value );
+	let wavesColor = "33, 47, 61";
 </script>
 
 <svelte:head>
@@ -17,10 +18,16 @@
 <CSS />
 
 <div id="page" class:dark-mode={isDarkMode}>
-	<Menu />
-	<Content />
+	<Menu {isDarkMode} />
+	<Content  {isDarkMode} />
 	<DarkModeButton>Dark Mode Toggle</DarkModeButton>
-	<Background />
+
+	{#if isDarkMode}
+		<Background {isDarkMode} bgColor={wavesColor}/>
+	{:else}
+		<Background {isDarkMode} />
+	{/if}
+
 </div>
 
 <style type="text/scss">

@@ -8,11 +8,7 @@
 	import References from './References.svelte'
 	
 	import { info } from '../info.js';
-	import { darkmode } from '../styles.js'
-
-	// Start with Dark Mode On
-	let isDarkMode;
-	const unsubscribe = darkmode.subscribe(value =>  isDarkMode = value );
+	export let isDarkMode;
 </script>
 	
 <main class="content" class:dark-mode={isDarkMode}>

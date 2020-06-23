@@ -7,6 +7,7 @@
 	export let facebook;
 	export let twitter;
 	export let isDarkMode;
+	import { darkmode } from '../styles.js'
 </script>
 
 <div id="title" class:dark-mode={isDarkMode}>

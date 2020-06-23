@@ -1,11 +1,20 @@
-<script>
-  let bgColor = "33, 47, 61"
+<script>  
+  // Set Primary Color
+  export let bgColor = "235,237,239"
+
+	// Check for Dark Mode
+  export let isDarkMode;
+
+  // Set Colors
   let bgColor0 ="rgba(" + bgColor + ",1)"
   let bgColor1 ="rgba(255,255,255,0.1)"
   let bgColor2 ="rgba(255,255,255,0.2)"
   let bgColor3 ="rgba(" + bgColor + ",0.3)"
   let bgColor4 ="rgba(" + bgColor + ",0.4)"
 </script>
+
+<div class="bg-color" class:dark-mode={isDarkMode}>Test</div>
+
 <div class="background">
   <!--Waves Container-->
   <div class="header">
@@ -25,16 +34,22 @@
   <!--Waves end-->
 </div>
 
-<div class="bg-color"></div>
+<style type="text/scss">
+  @import '../scss/colorscheme.scss';
 
-<style>
   .bg-color {
+    background-color: $color-bg;
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -2;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-align: center;
+    font-size: 15rem;
+  }
+  .dark-mode {
+    background-color: $dark-color-bg;
   }
   .background {
     position: absolute;

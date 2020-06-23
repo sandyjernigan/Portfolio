@@ -26,6 +26,7 @@
 		position: absolute;
 		right: 20px;
 		top: 20px;
+		z-index: 1;
 		
 	}
 	button.dark-mode {
