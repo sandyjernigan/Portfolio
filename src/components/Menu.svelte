@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
 	import { viewMenu, darkmode } from '../styles.js'
 
   // Menu click event

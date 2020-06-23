@@ -18,7 +18,7 @@
     <h1>The Dark Mode is {isDarkMode}</h1>
     <br />
     <Quote {...info.quote} />
-    <!-- <Portfolio /> -->
+    <Portfolio />
     <!-- <Profile />
     <Employment />
     <Education />
