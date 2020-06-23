@@ -48,6 +48,7 @@
     z-index: -1;
     text-align: center;
     font-size: 15rem;
+    overflow: hidden;
   }
   .dark-mode {
     background-color: $color-bg;

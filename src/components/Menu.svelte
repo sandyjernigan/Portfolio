@@ -13,8 +13,8 @@
     <i class="menu_close fa fa-times fa-lg"></i>
   </span>
   <ul class="menu_items">
-    <li><a href="#title"><i class="icon fa fa-signal fa-2x"></i> Title</a></li>
-    <li><a href="#title"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a></li>
+    <li><a href="#title"><i class="icon fa fa-home fa-2x"></i> Home</a></li>
+    <li><a href="#title"><i class="icon fa fa-tasks fa-2x"></i> Projects</a></li>
     <li><a href="#title"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
   </ul>
 </nav>

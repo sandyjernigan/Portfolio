@@ -21,14 +21,13 @@
 	<Menu {isDarkMode} />
 	<Content  {isDarkMode} />
 	<DarkModeButton>Dark Mode Toggle</DarkModeButton>
-
-	{#if isDarkMode}
-		<Background {isDarkMode} bgColor={wavesColor}/>
-	{:else}
-		<Background {isDarkMode} />
-	{/if}
-
 </div>
+
+{#if isDarkMode}
+	<Background {isDarkMode} bgColor={wavesColor}/>
+{:else}
+	<Background {isDarkMode} />
+{/if}
 
 <style type="text/scss">
   @import 'scss/colorscheme.scss';
@@ -40,7 +39,7 @@
 	@import url('https://fonts.googleapis.com/css2?family=Merienda+One');
 	
 	.page {
-		height: 200%;
+		height: 100%;
 		background-color: $color-bg;
 		color: $color-base;
 		
