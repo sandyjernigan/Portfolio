@@ -6,9 +6,10 @@
 	export let linkedin;
 	export let facebook;
 	export let twitter;
+	export let isDarkMode;
 </script>
 
-<div id="title">
+<div id="title" class:dark-mode={isDarkMode}>
 	
 	<div class="profileImage">
 		<img src={profileImg} alt="Profile" />
@@ -39,6 +40,8 @@
 </div>
 
 <style type="text/scss">
+	@import '../scss/colorscheme.scss';
+	
 	h1 { font-family: 'Merienda One', cursive; }
 
 	#title {
@@ -46,6 +49,11 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: 1rem;
+		color: $color-base;
+	}
+
+	#title.dark-mode {
+		color: $dark-color-base;
 	}
 
 	.titleContent, .profileImage {
@@ -86,13 +94,18 @@
 	}
 
 	i {
-		color: white;
+		color: $color-base;
 		filter:opacity(20%);
 		letter-spacing: 1.1rem;
 	}
 	i:hover {
 		transform: scale(1.5);
 		filter:opacity(60%);
+	}
+
+	// Dark Mode
+	.dark-mode i {
+		color: $dark-color-base;
 	}
 
   /*Shrinking for mobile*/

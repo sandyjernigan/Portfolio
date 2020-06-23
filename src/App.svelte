@@ -1,21 +1,14 @@
 <script>
-	import CSS from './styles/Styles.svelte'
+	import CSS from './components/Styles.svelte'
 	import Menu from './components/Menu.svelte'
+	import Content from './components/Content.svelte'
 	import DarkModeButton from './components/DarkModeButton.svelte'
 	import Background from './components/Background.svelte'
-	import Title from './components/Title.svelte'
-	import Quote from './components/Quote.svelte'
-	import Portfolio from './components/Portfolio.svelte'
-	import Profile from './components/Profile.svelte'
-	import Employment from './components/Employment.svelte'
-	import Education from './components/Education.svelte'
-	import References from './components/References.svelte'
-	
-	import { info } from './info.js';
+	import { darkmode } from './styles.js'
 
 	// Start with Dark Mode On
-	window.document.body.classList.add('dark-mode')
-
+	let isDarkMode;
+	const unsubscribe = darkmode.subscribe(value =>  isDarkMode = value );
 </script>
 
 <svelte:head>
@@ -23,50 +16,39 @@
 </svelte:head>
 <CSS />
 
-<div class="page">
+<div id="page" class:dark-mode={isDarkMode}>
 	<Menu />
-	
-  <main class="content">
-		<div class="content_inner">
-			<Title {...info.title} />
-			<DarkModeButton>Dark Mode Toggle</DarkModeButton>
-			<!-- <Quote {...info.quote} />
-			<Portfolio /> -->
-			<!-- <Profile />
-			<Employment />
-			<Education />
-			<References />	 -->
-		</div>
-	</main>
+	<Content />
+	<DarkModeButton>Dark Mode Toggle</DarkModeButton>
+	<Background />
 </div>
 
-<Background />
-
 <style type="text/scss">
+  @import 'scss/colorscheme.scss';
+
+	// Nav Snap
+	$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
+
 
 	:global(body){
-		background-color: #EBEDEF;
-		color: #212F3D;
-	}
-	:global(body.dark-mode){
-		background-color: #212F3D;
-		color:#EBEDEF;
+		background-color: $color-bg;
+		color: $color-base;
+		height: 100%;
+		overflow: hidden;
 	}
 
-	main {
-		z-index: 5;
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 5em auto 0;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	// Fonts to use
+	@import url('https://fonts.googleapis.com/css2?family=Merienda+One');
+	
+	.page {
+		height: 200%;
+		background-color: $color-bg;
+		color: $color-base;
+		
+		.dark-mode {
+			background-color: $dark-color-bg;
+			color: $dark-color-base;
 		}
 	}
-
-  @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
 
 </style>

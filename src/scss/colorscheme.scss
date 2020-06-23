@@ -1,0 +1,32 @@
+// Color Scheme
+$color-base: #212F3D;
+$color-bg: #EBEDEF;
+$color-light: lighten($color-base, 60%);
+
+$dark-color-base: #EBEDEF;
+$dark-color-bg: #212F3D;
+$dark-color-light: lighten($color-bg, 60%);
+
+
+// Font
+  // // Header Font
+  // @import url('https://fonts.googleapis.com/css2?family=Merienda+One');
+  // $headerFont: 'Merienda One', cursive;
+  // h1 { font-family: $headerFont; }
+
+  // // Body Font
+  // @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700');
+  // $bodyFont: 'Assistant', sans-serif;
+  // body { font-family: $bodyFont; }
+  
+  // // Quote Font
+  // @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700');
+  // $quoteFont: 'Caveat', cursive;
+
+  // // Quote Author
+  // @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1');
+  // $quoteAuthor: 'IBM Plex Serif', sans-serif;
+
+  // // Signed
+  // @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700');
+  // $SignFont: 'Dancing Script', cursive;

@@ -1,26 +1,35 @@
 <script>
-function toggle() {
-	window.document.body.classList.toggle('dark-mode')
-}
+	import { darkmode } from '../styles.js'
+	function toggle() {
+		darkmode.update(darkmode => !darkmode)
+	}
+
+	// Dark Mode
+	let isDarkMode;
+	const unsubscribe = darkmode.subscribe(value =>  isDarkMode = value );
 </script>
-<button on:click={toggle}>
+
+<button on:click={toggle} class:dark-mode={isDarkMode} >
 	<slot/>
 </button>
-<style>
+
+<style type="text/scss">
+	@import '../scss/colorscheme.scss';
+	
 	button {
-		background-color: #212F3D;
-		color: white;
+		background-color: $color-bg;
+		color: $color-base;
 		border: none;
 		border-radius: 4px;
 		padding: 0.5rem;
 		text-transform: uppercase;
 		position: absolute;
 		right: 20px;
-		bottom: 20px;
+		top: 20px;
 		
 	}
-	:global(body.dark-mode) button {
-		background-color: #0084f6;
-		color: white;
+	button.dark-mode {
+		background-color: $dark-color-bg;
+		color: $dark-color-base;
 	}
 </style>
