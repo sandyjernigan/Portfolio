@@ -7,10 +7,10 @@
 	export let facebook;
 	export let twitter;
 	export let isDarkMode;
-	import { darkmode } from '../styles.js'
+	// import { darkmode } from '../styles.js'
 </script>
 
-<div id="title" class:dark-mode={$darkmode}>
+<div id="title" class:dark-mode={isDarkMode}>
 	
 	<div class="profileImage">
 		<img src={profileImg} alt="Profile" />
@@ -30,10 +30,10 @@
 					<i class="fab fa-github"></i></a>
 				<a href={linkedin}>
 					<i class="fab fa-linkedin"></i></a>
-				<a href={facebook}>
+				<!-- <a href={facebook}>
 					<i class="fab fa-facebook"></i></a>
 				<a href={twitter}>
-					<i class="fab fa-twitter"></i></a>
+					<i class="fab fa-twitter"></i></a> -->
 			</div>
 		</div>
 	</div>

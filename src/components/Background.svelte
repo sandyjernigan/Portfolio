@@ -14,8 +14,6 @@
   // }
 </script>
 
-<div class="bg-color" class:dark-mode={isDarkMode}></div>
-
 <div class="background">
   <!--Waves Container-->
   <div class="header">
@@ -37,31 +35,17 @@
 
 <style type="text/scss">
   @import '../scss/colorscheme.scss';
-
-  .bg-color {
-    background-color: $dark-color-bg;
-    position: absolute;
+  
+  .background {
     width: 100%;
-    height: 100%;
     left: 0;
     top: 0;
     z-index: -1;
-    text-align: center;
-    font-size: 15rem;
-    overflow: hidden;
-  }
-  .dark-mode {
-    background-color: $color-bg;
-  }
-  .background {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
   }
   .header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
     text-align: center;
     background: linear-gradient(60deg, rgb(64, 77, 195) 0%, rgba(0, 172, 193, 1) 100%);
   }

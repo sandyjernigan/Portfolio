@@ -6,68 +6,41 @@
 	import Employment from './Employment.svelte'
 	import Education from './Education.svelte'
 	import References from './References.svelte'
-	import { viewMenu } from '../styles.js'
 	
 	import { info } from '../info.js';
 	export let isDarkMode;
 </script>
 	
-<main class="content" class:dark-mode={isDarkMode} class:viewMenu={$viewMenu}>
-  <div class="content_inner">
-    <Title {...info.title} {isDarkMode} />
-    <h1>The Dark Mode is {isDarkMode}</h1>
-    <br />
-    <Quote {...info.quote} />
-    <Portfolio />
-    <!-- <Profile />
-    <Employment />
-    <Education />
-    <References />	 -->
-  </div>
-</main>
+<div class="content_inner" class:dark-mode={isDarkMode}>
+  <Title {...info.title} {isDarkMode} />
+  <h1>The Dark Mode is {isDarkMode}</h1>
+  <br />
+  <Quote {...info.quote} />
+  <Portfolio />
+  <!-- <Profile />
+  <Employment />
+  <Education />
+  <References />	 -->
+
+  <div id="footer">This page is still in progress. More content to come ...</div>
+</div>
 
 <style type="text/scss">
   @import '../scss/colorscheme.scss';
 
-	// Nav Snap
-	$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
-
-	main {
-  	height: 100%;
-		z-index: 5;
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 5em auto 0;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-
-	.content {
-		// essential
-		height: 200%; // make higher or you'll see background when rotated
-		transform-origin: top left;
-		transition: transform .7s $snap;
-		
-		// styling
-		background-color: $color-bg;
-	}
-
 	.content_inner {
-		// essential
-		height: 50%; // compensate for higher .content
-		overflow-y: auto; // set expected overflow
+    min-height: 0;
+    height: 50%;
+    overflow-y: scroll; // set expected overflow
 		
 		// styling
-		padding: 50px 20%;
-  }
-
-  .content.viewMenu {
-    transform: rotate(-30deg);
+    padding: 50px 20%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Chrome/Safari/Webkit */
+    }
   }
   
 	// Dark Mode
@@ -75,13 +48,13 @@
 		background-color: $dark-color-bg;
 		color: $dark-color-base;
 
-		.content {
-			background-color: $dark-color-bg;
-		}
-
 		.content_inner {
 			background-color: $dark-color-bg;
 		}
+	}
+
+	#footer {
+		height: 200px;
 	}
 
 </style>
