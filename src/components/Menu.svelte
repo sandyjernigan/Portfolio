@@ -14,8 +14,8 @@
   </span>
   <ul class="menu_items">
     <li><a href="#title"><i class="icon fa fa-home fa-2x"></i> Home</a></li>
-    <li><a href="#title"><i class="icon fa fa-tasks fa-2x"></i> Resume</a></li>
-    <li><a href="#title"><i class="icon fa fa-heart fa-2x"></i> Projects</a></li>
+    <li><a href="#resume"><i class="icon fa fa-tasks fa-2x"></i> Resume</a></li>
+    <li><a href="#projects"><i class="icon fa fa-heart fa-2x"></i> Projects</a></li>
   </ul>
 </nav>
 
