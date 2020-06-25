@@ -6,4 +6,4 @@ import Employment from './Employment.svelte'
 import Education from './Education.svelte'
 import References from './References.svelte'
 
-export { Title, Quote };
+export { Title, Quote, Portfolio };

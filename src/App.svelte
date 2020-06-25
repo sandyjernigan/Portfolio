@@ -27,7 +27,7 @@
 		{:else}
 			<Background {isDarkMode} />
 		{/if}
-
+		
 		<Content  {isDarkMode} />
 		<DarkModeButton>Dark Mode Toggle</DarkModeButton>
 

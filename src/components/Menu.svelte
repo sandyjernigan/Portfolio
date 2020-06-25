@@ -89,7 +89,7 @@
     li {
       z-index: -1;
       font-size: 3vh;
-      transform: translateX(-200px);
+      transform: translateX(-300px);
       transition: transform .7s 0s $snap;
       margin-bottom: 10%;
       text-align: right;

@@ -10,14 +10,9 @@
 
 <style>
 	p {
-		color: red;
 		filter: grayscale(50%);
 		font-weight: bold;
 		font-size: 2.5rem;
-	}
-
-	a {
-		color: red;
 	}
 
   /*Shrinking for mobile*/
