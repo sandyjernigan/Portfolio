@@ -22,6 +22,7 @@
 <style type="text/scss">
 	// Color Scheme
   @import '../scss/colorscheme.scss';
+  @import '../scss/animations.scss';
   
   $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
   $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -86,11 +87,13 @@
     transform: rotate(-40deg);
     
     li {
+      z-index: -1;
       font-size: 3vh;
-      transform: translateX(-900px);
+      transform: translateX(-200px);
       transition: transform .7s 0s $snap;
       margin-bottom: 10%;
       text-align: right;
+      opacity: 0;
     }
     a {
       text-decoration: none;
@@ -164,6 +167,8 @@
     }
     .menu_items {
       li {
+        @include fadeIn(1.5s);
+        z-index: 99;
         display: block;
         transform: translateX(0) rotate(40deg);
         transition: transform .35s .45s $bounce;
