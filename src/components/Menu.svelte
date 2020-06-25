@@ -73,39 +73,25 @@
   .menu_items {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: left;
+    justify-content: space-around;
+    align-items: right;
     position: fixed;
-    bottom: 10px;
-    left: 2%;
+    bottom: 0;
+    left: -40px;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    @media(min-height:450px) {
-      height: 50%;
-    }
+    height: 50vh;
+    transform-origin: top right;
+    transform: rotate(-40deg);
     
     li {
+      font-size: 3vh;
       display: block;
       transform: translateX(-300px);
       transition: transform .7s 0s $snap;
       margin-bottom: 10%;
-      @media(max-height:400px) {
-        margin-bottom: 5%;
-      }
-
-      &:nth-child(2) {
-        margin-left: 40px;
-        @media(max-height:400px) {
-          margin-left: 10px;
-        }
-      }
-      &:nth-child(3) {
-        margin-left: 80px;
-        @media(max-height:400px) {
-          margin-left: 20px;
-        }
-      }
+      text-align: right;
     }
     a {
       display: block;
@@ -114,54 +100,18 @@
       letter-spacing: 2px;
       color: darken($dark-color-base, 30%);
       transition: color .2s;
-
-      @media(max-height:400px) {
-        font-size: 80%
-      }
-      @media(max-height:280px) {
-        font-size: 40%
-      }
-
-      i {
-        font-size: 200%;
-      }
       
       .icon {
         position: relative;
         display: inline-block;
         margin-right: 20px;
         color: $dark-color-base;
-
-        @media(max-height:400px) {
-          margin-right: 5px;
-        }
-
-        // &:after {
-        //   position: absolute;
-        //   top: 50%;
-        //   left: 50%;
-        //   content: '';
-        //   display: block;
-        //   width: 200%;
-        //   height: 200%;
-        //   margin-left: -100%;
-        //   margin-top: -100%;
-          // border-radius: 50%;
-          // border: 2px solid $dark-color-base;
-        //   transition: border-color .2s;
-        // }
-      }
-      
+      }      
       &:hover {
         filter: grayscale(80%);
         filter: brightness(200%);
         
         color: $dark-color-base;
-        // .icon {
-        //   &:after {
-        //     border-color: $dark-color-base;
-        //   }
-        // }
       }
       &:active {
         .icon {
@@ -172,6 +122,7 @@
     }
   }
   
+  // Dark Mode
   nav.dark-mode {
     .menu_toggle {
       background-color: $dark-color-bg;
@@ -205,7 +156,7 @@
     }
   }
 
-  /* Let's open up the menu */
+  // View Menu
   nav.viewMenu {
     .menu_open {
       transform: rotate(-20deg);
@@ -215,7 +166,7 @@
     }
     .menu_items {
       li {
-        transform: translateX(0);
+        transform: translateX(0) rotate(40deg);
         transition: transform .35s .45s $bounce;
       
         &:nth-child(2){
