@@ -87,14 +87,12 @@
     
     li {
       font-size: 3vh;
-      display: block;
-      transform: translateX(-300px);
+      transform: translateX(-400px);
       transition: transform .7s 0s $snap;
       margin-bottom: 10%;
       text-align: right;
     }
     a {
-      display: block;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -166,6 +164,7 @@
     }
     .menu_items {
       li {
+        display: block;
         transform: translateX(0) rotate(40deg);
         transition: transform .35s .45s $bounce;
       
