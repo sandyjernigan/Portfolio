@@ -1,11 +1,5 @@
 <script>
-	import Title from './Title.svelte'
-	import Quote from './Quote.svelte'
-	import Portfolio from './Portfolio.svelte'
-	import Profile from './Profile.svelte'
-	import Employment from './Employment.svelte'
-	import Education from './Education.svelte'
-	import References from './References.svelte'
+	import { Title, Quote } from './content/index.js'
 	
 	import { info } from '../info.js';
 	export let isDarkMode;
@@ -16,7 +10,7 @@
   <h1>The Dark Mode is {isDarkMode}</h1>
   <br />
   <Quote {...info.quote} />
-  <Portfolio />
+  <!-- <Portfolio /> -->
   <!-- <Profile />
   <Employment />
   <Education />

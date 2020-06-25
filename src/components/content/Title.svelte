@@ -41,7 +41,7 @@
 </div>
 
 <style type="text/scss">
-	@import '../scss/colorscheme.scss';
+	@import '../../scss/colorscheme.scss';
 	
 	h1 { font-family: 'Merienda One', cursive; }
 

@@ -87,7 +87,7 @@
     
     li {
       font-size: 3vh;
-      transform: translateX(-400px);
+      transform: translateX(-900px);
       transition: transform .7s 0s $snap;
       margin-bottom: 10%;
       text-align: right;
