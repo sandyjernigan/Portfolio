@@ -1,6 +1,5 @@
 <script>
-  import { Title, Quote, Portfolio } from './content/index.js'
-  import ScrollBar from './ScrollBar.svelte'	
+  import { Title, Quote, Portfolio } from './content/index.js'	
 	import { info } from '../info.js';
   export let isDarkMode;
 </script>
@@ -11,77 +10,66 @@
   <br />
   <Quote {...info.quote} />
   <Portfolio />
-	<br />
-	<br />
-	<br />
-	<br />
-  <div>Content .... </div>
-  <!-- <Profile />
+	
+  <!-- 
+	<Profile />
   <Employment />
   <Education />
-  <References />	 -->
+  <References />
+	-->
+  <div>Content .... </div><br />	
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
+  <div>Content .... </div><br />
 
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<br />
-	<br />
-	<br />
-	<br />
   <div id="footer">This page is still in progress. More content to come ...</div>
-  <ScrollBar />
 </div>
 
 <style type="text/scss">
@@ -110,9 +98,17 @@
     &::-webkit-scrollbar-thumb {
       border-radius: 1em;
       background-color: $color-bg;
-      // outline: 1px solid slategrey;
+      outline: 1px solid slategrey;
     }
   }
+
+  // ::-webkit-scrollbar-thumb:vertical {
+  //   background: $color-bg url('img/transparent-bubble-gif-10.png') no-repeat;
+  // }
+
+  // ::-webkit-scrollbar-thumb {
+  //   background: url('img/transparent-bubble-gif-10.png') no-repeat;
+  // }
   
 	// Dark Mode
 	.dark-mode {
@@ -121,17 +117,6 @@
 
 		.content_inner {
 			background-color: $dark-color-bg;
-      // scrollbar-color: $color-bg $dark-color-bg;
-      // &::-webkit-scrollbar {
-      //   background-color: $dark-color-bg; /* Chrome/Safari/Webkit */
-      // }
-      // &::-webkit-scrollbar-track {
-      //   box-shadow: inset 0 0 6px rgba(25, 0, 116, 0.3);
-      // }
-      // &::-webkit-scrollbar-thumb {
-      //   background-color: $dark-color-bg;
-      //   outline: 1px solid slategrey;
-      // }
 		}
 	}
 

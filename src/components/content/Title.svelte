@@ -4,8 +4,6 @@
 	export let profileImg;
 	export let github;
 	export let linkedin;
-	export let facebook;
-	export let twitter;
 	export let isDarkMode;
 	// import { darkmode } from '../styles.js'
 </script>
@@ -22,18 +20,11 @@
 		<p>{title}</p>
 
 		<div class="contact">
-			<div class="follow">
-				Please Follow Me:
-			</div>
 			<div class="icons">
 				<a href={github}>
 					<i class="fab fa-github"></i></a>
 				<a href={linkedin}>
 					<i class="fab fa-linkedin"></i></a>
-				<!-- <a href={facebook}>
-					<i class="fab fa-facebook"></i></a>
-				<a href={twitter}>
-					<i class="fab fa-twitter"></i></a> -->
 			</div>
 		</div>
 	</div>
@@ -89,15 +80,15 @@
 		align-items: baseline;
 	}
 
-	.follow {
-		padding: 0.5rem 1rem 1rem 0;
-		font-size: 0.9rem;
+	.icons {
+		padding: 2%;
+		font-size: 2rem;
 	}
 
 	i {
 		color: $color-base;
 		filter:opacity(20%);
-		letter-spacing: 1.1rem;
+		letter-spacing: 2rem;
 	}
 	i:hover {
 		transform: scale(1.5);
