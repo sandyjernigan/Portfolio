@@ -6,3 +6,11 @@ $color-light: lighten($color-base, 60%);
 $dark-color-base: #EBEDEF;
 $dark-color-bg: #212F3D;
 $dark-color-light: lighten($color-bg, 60%);
+
+// Mixin 
+// Center
+@mixin centerdivfrombottom($bottom){
+  bottom: $bottom;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50)
+}

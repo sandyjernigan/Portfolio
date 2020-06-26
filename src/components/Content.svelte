@@ -1,11 +1,15 @@
 <script>
-  import { Title, Quote, Portfolio } from './content/index.js'	
+	import { Title, Quote, Portfolio } from './content/index.js'	
+	import Section from './Section.svelte'
 	import { info } from '../info.js';
   export let isDarkMode;
 </script>
 	
 <div class="content_inner" class:dark-mode={isDarkMode}>
-  <Title {...info.title} {isDarkMode} />
+	<Section>
+		<Title {...info.title} {isDarkMode} />
+	</Section>
+  
   <h1>The Dark Mode is {isDarkMode}</h1>
   <br />
   <Quote {...info.quote} />
@@ -88,7 +92,7 @@
     overflow-y: scroll; // set expected overflow
 		
 		// styling
-    padding: 50px 20%;
+    padding: 0 11% 0 2%;
     scrollbar-width: 0.5em; /* Firefox */
     scrollbar-color: $dark-color-bg $color-bg;
     &::-webkit-scrollbar {
@@ -97,7 +101,7 @@
     }
     &::-webkit-scrollbar-thumb {
       border-radius: 1em;
-      background-color: $color-bg;
+      background-color: lighten($dark-color-bg, 5%);
       outline: 1px solid slategrey;
     }
   }

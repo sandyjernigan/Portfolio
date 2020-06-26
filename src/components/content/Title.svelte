@@ -36,11 +36,14 @@
 	h1 { font-family: 'Merienda One', cursive; }
 
 	#title {
+		border: 2px solid black;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin-top: 1rem;
 		color: $color-base;
+		padding-bottom: 20%;
+		min-height: 280px;
 	}
 
 	#title.dark-mode {
@@ -52,7 +55,7 @@
 	}
 
 	h1 {
-		font-size: 3rem;
+		font-size: 2rem;
 		font-weight: 300;
 		letter-spacing: 2px;
 		line-height: 4rem;
@@ -68,8 +71,8 @@
 
 	img {
 		width: 100%;
-		max-width: 200px;
-		border-radius: 100px;
+		max-width: 250px;
+		border-radius: 125px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 	}
 
@@ -80,7 +83,7 @@
 	}
 
 	.icons {
-		padding: 2%;
+		padding-top: 5%;
 		font-size: 2rem;
 	}
 
