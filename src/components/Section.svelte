@@ -1,9 +1,16 @@
-<section>
+<script>
+  import ScrollNext from "./ScrollNext.svelte";
+  export let sectionid;
+  export let nextsectionid;
+</script>
+
+<div id={sectionid}>
   <slot></slot>
-</section>
+  <ScrollNext {nextsectionid} />
+</div>
 
 <style>
-  section {
+  div {
     display: flex;
     align-content: center;
     justify-content: center;

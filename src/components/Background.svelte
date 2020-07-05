@@ -46,6 +46,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
     text-align: center;
     background: linear-gradient(60deg, rgb(64, 77, 195) 0%, rgba(0, 172, 193, 1) 100%);
   }

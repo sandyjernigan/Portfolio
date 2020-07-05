@@ -1,12 +1,16 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
+    "server": "node server.js",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "run-p autobuild start:dev",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"
+    "start:dev": "sirv public --single --dev",
+    "compile": "nexe server.js -r 'public/**/*.html' --build",
+    "nexe": "nexe -i server.js -o myproject.bin -r 0.10.3 --build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^12.0.0",
@@ -23,6 +27,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "express": "^4.17.1",
+    "gsap": "^3.3.4",
     "sass": "^1.26.8",
     "sirv-cli": "^0.4.4",
     "svelte-preprocess": "^3.9.6"

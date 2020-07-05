@@ -6,7 +6,7 @@
 </script>
 	
 <div class="content_inner" class:dark-mode={isDarkMode}>
-	<Section>
+	<Section sectionid={"title"}>
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
@@ -89,30 +89,10 @@
 	.content_inner {
     min-height: 0;
     height: 50%;
-    overflow-y: scroll; // set expected overflow
 		
 		// styling
     padding: 0 11% 0 2%;
-    scrollbar-width: 0.5em; /* Firefox */
-    scrollbar-color: $dark-color-bg $color-bg;
-    &::-webkit-scrollbar {
-      width: 0.5em;
-      background-color: $dark-color-bg; /* Chrome/Safari/Webkit */
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 1em;
-      background-color: lighten($dark-color-bg, 5%);
-      outline: 1px solid slategrey;
-    }
   }
-
-  // ::-webkit-scrollbar-thumb:vertical {
-  //   background: $color-bg url('img/transparent-bubble-gif-10.png') no-repeat;
-  // }
-
-  // ::-webkit-scrollbar-thumb {
-  //   background: url('img/transparent-bubble-gif-10.png') no-repeat;
-  // }
   
 	// Dark Mode
 	.dark-mode {

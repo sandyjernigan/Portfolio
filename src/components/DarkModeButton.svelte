@@ -23,9 +23,9 @@
 		border-radius: 4px;
 		padding: 0.5rem;
 		text-transform: uppercase;
-		position: absolute;
+		position: fixed;
 		right: 20px;
-		top: 20px;
+		top: 10px;
 		z-index: 1;
 		
 	}

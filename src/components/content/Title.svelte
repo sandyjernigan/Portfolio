@@ -7,7 +7,7 @@
 	export let isDarkMode;
 </script>
 
-<div id="title" class:dark-mode={isDarkMode}>
+<section class:dark-mode={isDarkMode}>
 	
 	<div class="profileImage">
 		<img src={profileImg} alt="Profile" />
@@ -28,15 +28,14 @@
 		</div>
 	</div>
 
-</div>
+</section>
 
 <style type="text/scss">
 	@import '../../scss/colorscheme.scss';
 	
 	h1 { font-family: 'Merienda One', cursive; }
 
-	#title {
-		border: 2px solid black;
+	section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -46,7 +45,7 @@
 		min-height: 280px;
 	}
 
-	#title.dark-mode {
+	section.dark-mode {
 		color: $dark-color-base;
 	}
 

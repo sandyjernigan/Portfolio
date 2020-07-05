@@ -24,12 +24,13 @@
 
 		{#if isDarkMode}
 			<Background {isDarkMode} bgColor={wavesColor}/>
+			<DarkModeButton><i class="fas fa-moon"></i></DarkModeButton>
 		{:else}
 			<Background {isDarkMode} />
+			<DarkModeButton><i class="fas fa-sun"></i></DarkModeButton>
 		{/if}
 		
 		<Content  {isDarkMode} />
-		<DarkModeButton>Dark Mode Toggle</DarkModeButton>
 
 	</div>
 </main>
@@ -44,6 +45,7 @@
 	@import url('https://fonts.googleapis.com/css2?family=Merienda+One');
 	
 	main {
+		z-index: 9;
 		position: fixed;
 		height: 100%;
 		width: 100%;
@@ -51,6 +53,20 @@
 		left: 0;
 		background-color: $dark-color-bg;
 		color: $dark-color-base;
+
+    // Scroll Bar
+    overflow-y: scroll; // set expected overflow
+    scrollbar-width: 0.5em; /* Firefox */
+    scrollbar-color: $dark-color-bg $color-bg;
+    &::-webkit-scrollbar {
+      width: 0.5em;
+      background-color: $dark-color-bg; /* Chrome/Safari/Webkit */
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1em;
+      background-color: lighten($dark-color-bg, 5%);
+      outline: 1px solid slategrey;
+    }
 	}
 
 	.content {
