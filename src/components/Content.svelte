@@ -6,17 +6,25 @@
 </script>
 	
 <div class="content_inner" class:dark-mode={isDarkMode}>
-	<Section sectionid={"title"}>
+	<Section sectionid={"title"} nextsectionid={"portfolio"}>
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
-	<Section sectionid={"portfolio"}>
+	<Section sectionid={"portfolio"} nextsectionid={"skills"}>
     <Portfolio {...info.portfolio} />
 	</Section>
 
-	<Skills {...info.skills} />
-  <History />
-  <References />
+	<Section sectionid={"skills"} nextsectionid={"history"}>
+	  <Skills {...info.skills} />
+	</Section>
+
+	<Section sectionid={"history"} nextsectionid={"references"}>
+    <History />
+	</Section>
+
+	<Section sectionid={"references"} nextsectionid={"footer"}>
+    <References />
+	</Section>
 
   <div id="footer">This page is still in progress. More content to come ...</div>
 </div>
@@ -50,7 +58,7 @@
 	}
 
 	#footer {
-		height: 200px;
+		height: 500px;
 	}
 
 </style>

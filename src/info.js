@@ -22,8 +22,7 @@ export const info = {
     },
     center: {
       text: "Svelte",
-      icon: "",
-      url: "./"
+      url: "./img/svelte.svg"
     },
     right: {
       text: "React",
