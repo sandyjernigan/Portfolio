@@ -14,3 +14,11 @@ $dark-color-light: lighten($color-bg, 60%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50)
 }
+
+
+a {
+  color: $color-base;
+}
+.dark-mode a {
+  $dark-color-base: #EBEDEF;
+}

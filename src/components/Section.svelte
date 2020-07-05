@@ -6,7 +6,7 @@
 
 <div id={sectionid}>
   <slot></slot>
-  <ScrollNext {nextsectionid} />
+  <ScrollNext nextsectionid={nextsectionid} />
 </div>
 
 <style>

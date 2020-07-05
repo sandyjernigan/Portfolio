@@ -1,4 +1,4 @@
-<div class="Portfolio">
+<div class="portfolio">
 
 	<p>This site is made using <a href="https://svelte.dev/">Svelte</a>.
 

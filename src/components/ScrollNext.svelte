@@ -1,23 +1,24 @@
 <script>
   export let nextsectionid;
-  
-  function goTo(section) {
-		alert({section})
-	}
 </script>
 
-<div class="arrow"
-  onclick="goTo({nextsectionid})">
-  <i class="fas fa-angle-double-down"></i>
-  <!-- <br />{nextsectionid} -->
+<div class="arrow">
+  <a href="#{nextsectionid}">
+    <i class="fas fa-angle-double-down"></i>
+  </a>
 </div>
 
 <style type="text/scss">
+  @import '../scss/colorscheme.scss';
+  
   div {
 		display: inline-block;
     bottom: 20px;
     left: 50%;
     font-size: 3em;
+  }
+  a {
+    text-shadow: 2px 2px 5px $color-bg, -2px -2px 5px $color-bg;
   }
   i {
     top: 0;

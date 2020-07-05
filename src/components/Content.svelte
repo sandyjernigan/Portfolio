@@ -6,23 +6,23 @@
 </script>
 	
 <div class="content_inner" class:dark-mode={isDarkMode}>
-	<Section sectionid={"title"} nextsectionid={"portfolio"}>
+	<Section sectionid="title" nextsectionid="portfolio">
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
-	<Section sectionid={"portfolio"} nextsectionid={"skills"}>
+	<Section sectionid="portfolio" nextsectionid="skills">
     <Portfolio {...info.portfolio} />
 	</Section>
 
-	<Section sectionid={"skills"} nextsectionid={"history"}>
+	<Section sectionid="skills" nextsectionid="history">
 	  <Skills {...info.skills} />
 	</Section>
 
-	<Section sectionid={"history"} nextsectionid={"references"}>
+	<Section sectionid="history" nextsectionid="references">
     <History />
 	</Section>
 
-	<Section sectionid={"references"} nextsectionid={"footer"}>
+	<Section sectionid="references" nextsectionid="footer">
     <References />
 	</Section>
 
