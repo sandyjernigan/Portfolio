@@ -1,5 +1,5 @@
 <script>
-	import { Title, Quote, Portfolio } from './content/index.js'	
+	import { Title, Quote, Portfolio, Skills } from './content/index.js'	
 	import Section from './Section.svelte'
 	import { info } from '../info.js';
   export let isDarkMode;
@@ -13,10 +13,10 @@
   <h1>The Dark Mode is {isDarkMode}</h1>
   <br />
   <Quote {...info.quote} />
-  <Portfolio />
+  <Portfolio {...info.portfolio} />
+	<Skills {...info.skills} />
 	
   <!-- 
-	<Profile />
   <Employment />
   <Education />
   <References />
