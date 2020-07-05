@@ -3,15 +3,16 @@
 </script>
 
 <div id={nextsectionid}>
-  <button><i class="arrow down"></i>{nextsectionid}</button>
+  <i class="fas fa-angle-double-down"></i>
+  <!-- <br />{nextsectionid} -->
 </div>
 
 <style>
   div {
 		display: inline-block;
-    position: absolute;
-    bottom: -20rem;
-    margin-left: auto;
-    margin-right: auto;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    font-size: 3em;
   }
 </style>
