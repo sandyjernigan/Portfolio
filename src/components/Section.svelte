@@ -12,6 +12,8 @@
 <style>
   div {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     width: 100%;

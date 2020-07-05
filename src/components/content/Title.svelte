@@ -1,31 +1,42 @@
 <script>
+	import { Quote } from './index.js';
 	export let name;
 	export let title;
 	export let profileImg;
 	export let github;
 	export let linkedin;
+	export let quote;
+	export let quoteby;
 	export let isDarkMode;
 </script>
 
 <section class:dark-mode={isDarkMode}>
-	
-	<div class="profileImage">
-		<img src={profileImg} alt="Profile" />
-	</div>
 
-	<div class="titleContent">
-		<h1>Hi! I'm <br />
-			{name}.</h1>
-		<p>{title}</p>
+	<div class="title">	
+		<div class="profileImage">
+			<img src={profileImg} alt="Profile" />
+		</div>
 
-		<div class="contact">
-			<div class="icons">
-				<a href={github}>
-					<i class="fab fa-github"></i></a>
-				<a href={linkedin}>
-					<i class="fab fa-linkedin"></i></a>
+		<div class="titleContent">
+			<h1>Hi! I'm <br />
+				{name}.</h1>
+			<p>{title}</p>
+
+			<div class="contact">
+				<div class="icons">
+					<a href={github}>
+						<i class="fab fa-github"></i></a>
+					<a href={linkedin}>
+						<i class="fab fa-linkedin"></i></a>
+				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="break"></div>
+
+	<div class="quote">
+		<Quote {quote} {quoteby} />
 	</div>
 
 </section>
@@ -39,14 +50,31 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-flow: row wrap;
 		margin-top: 1rem;
+		padding-bottom: 10%;
 		color: $color-base;
-		padding-bottom: 20%;
 		min-height: 280px;
+
+		&.dark-mode {
+			color: $dark-color-base;
+		}
 	}
 
-	section.dark-mode {
-		color: $dark-color-base;
+	.title {
+		display: flex;
+		// flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.break {
+		flex-basis: 100%;
+		height: 0;
+		width: 0;
+	}
+	.quote {
+		flex-basis: 100%;
+		padding-left: 25%;
 	}
 
 	.titleContent, .profileImage {

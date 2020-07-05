@@ -1,5 +1,5 @@
 <script>
-	import { Title, Quote, Portfolio, Skills } from './content/index.js'	
+	import { Title, Portfolio, Skills, History, References } from './content/index.js'	
 	import Section from './Section.svelte'
 	import { info } from '../info.js';
   export let isDarkMode;
@@ -10,68 +10,13 @@
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
-  <h1>The Dark Mode is {isDarkMode}</h1>
-  <br />
-  <Quote {...info.quote} />
-  <Portfolio {...info.portfolio} />
+	<Section sectionid={"portfolio"}>
+    <Portfolio {...info.portfolio} />
+	</Section>
+
 	<Skills {...info.skills} />
-	
-  <!-- 
-  <Employment />
-  <Education />
+  <History />
   <References />
-	-->
-  <div>Content .... </div><br />	
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
-  <div>Content .... </div><br />
 
   <div id="footer">This page is still in progress. More content to come ...</div>
 </div>

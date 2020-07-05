@@ -6,10 +6,32 @@ export const info = {
     github: "https://github.com/sandyjernigan",
     linkedin: "https://www.linkedin.com/in/sdj1983",
     facebook: "https://www.facebook.com/sjernigan",
-    twitter: "https://twitter.com/sjernigan83"
-  },
-  quote: {
+    twitter: "https://twitter.com/sjernigan83",
     quote: "One look is worth a thousand words.",
     quoteby: "Printer's Ink, December 1921"
+  },
+  skills: {
+    explainer: "Hover Me",
+    lefter: {
+      text: "HTML/CSS",
+      icon: "fab fa-html5"
+    },
+    left: {
+      text: "Javascript",
+      icon: "fab fa-js-square"
+    },
+    center: {
+      text: "Svelte",
+      icon: "",
+      url: "./"
+    },
+    right: {
+      text: "React",
+      icon: "fab fa-html5"
+    },
+    righter: {
+      text: "Python",
+      icon: "fab fa-html5"
+    }
   }
 }
