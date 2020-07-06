@@ -26,11 +26,11 @@ export const info = {
     },
     right: {
       text: "React",
-      icon: "fab fa-html5"
+      icon: "fab fa-react"
     },
     righter: {
       text: "Python",
-      icon: "fab fa-html5"
+      icon: "fab fa-python"
     }
   }
 }

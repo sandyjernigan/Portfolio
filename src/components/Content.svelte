@@ -26,7 +26,10 @@
     <References />
 	</Section>
 
-  <div id="footer">This page is still in progress. More content to come ...</div>
+	<Section sectionid="footer" nextsectionid="title">
+   <div>This page is still in progress. More content to come ...</div>
+	</Section>
+
 </div>
 
 <style type="text/scss">

@@ -9,7 +9,15 @@
   <ScrollNext nextsectionid={nextsectionid} />
 </div>
 
-<style>
+  <span class="arrowHome">
+    <a href="#title">
+      <i class="fas fa-home"></i>
+    </a>
+  </span>
+
+<style type="text/scss">
+  @import '../scss/colorscheme.scss';
+  
   div {
     display: flex;
     flex-wrap: wrap;
@@ -19,4 +27,16 @@
     width: 100%;
     height: 100vh;
   }
+  span {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2em;
+    
+    a {
+      text-shadow: 1px 1px 2px $color-bg, -1px -1px 2px $color-bg;
+    }
+  }
+
+
 </style>
