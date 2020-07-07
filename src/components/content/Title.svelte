@@ -43,18 +43,16 @@
 
 <style type="text/scss">
 	@import '../../scss/colorscheme.scss';
-	
-	h1 { font-family: 'Merienda One', cursive; }
 
 	section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-		margin-top: 1rem;
-		padding-bottom: 10%;
+		padding-top: 1rem;
 		color: $color-base;
 		min-height: 280px;
+		padding-bottom: 2vh;
 
 		&.dark-mode {
 			color: $dark-color-base;
@@ -82,6 +80,7 @@
 	}
 
 	h1 {
+		font-family: 'Merienda One', cursive;
 		font-size: 2rem;
 		font-weight: 300;
 		letter-spacing: 2px;

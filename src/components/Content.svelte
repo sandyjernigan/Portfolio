@@ -6,11 +6,11 @@
 </script>
 	
 <div class="content_inner" class:dark-mode={isDarkMode}>
-	<Section sectionid="title" nextsectionid="portfolio">
+	<Section sectionid="title" nextsectionid="projects">
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
-	<Section sectionid="portfolio" nextsectionid="skills">
+	<Section sectionid="projects" nextsectionid="skills">
     <Portfolio {...info.portfolio} />
 	</Section>
 
@@ -29,7 +29,6 @@
 	<Section sectionid="footer" nextsectionid="title">
    <div>This page is still in progress. More content to come ...</div>
 	</Section>
-
 </div>
 
 <style type="text/scss">

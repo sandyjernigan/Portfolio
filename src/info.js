@@ -11,26 +11,26 @@ export const info = {
     quoteby: "Printer's Ink, December 1921"
   },
   skills: {
-    explainer: "Hover Me",
+    explainer: "Hover",
     lefter: {
       text: "HTML/CSS",
-      icon: "fab fa-html5"
+      image: "./img/logo/html5.svg"
     },
     left: {
       text: "Javascript",
-      icon: "fab fa-js-square"
+      image: "./img/logo/js.png"
     },
     center: {
       text: "Svelte",
-      url: "./img/svelte.svg"
+      image: "./img/logo/svelte.svg"
     },
     right: {
       text: "React",
-      icon: "fab fa-react"
+      image: "./img/logo/react.png"
     },
     righter: {
       text: "Python",
-      icon: "fab fa-python"
+      image: "./img/logo/python.png"
     }
   }
 }

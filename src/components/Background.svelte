@@ -3,7 +3,7 @@
   export let bgColor = "235,237,239"
 
 	// Check for Dark Mode
-  export let isDarkMode;
+  // export let isDarkMode;
 
   // Set Colors
   let bgColor0 ="rgba(" + bgColor + ",1)"

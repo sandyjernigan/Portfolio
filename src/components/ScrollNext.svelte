@@ -13,9 +13,9 @@
   
   div {
 		display: inline-block;
-    bottom: 20px;
     left: 50%;
     font-size: 3em;
+    padding-top: 5vh;
   }
   a {
     text-shadow: 2px 2px 5px $color-bg, -2px -2px 5px $color-bg;
@@ -23,8 +23,8 @@
   i {
     top: 0;
     transition: top ease 0.5s;
-    padding: 10px;
-    padding-left: 10%;
+    // padding: 10px;
+    // padding-left: 10%;
   }
   i:hover {
     -moz-animation: bounce 1.5s infinite;

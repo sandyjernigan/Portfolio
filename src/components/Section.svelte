@@ -25,7 +25,8 @@
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 96vh;
+    padding-left: 5%;
   }
   span {
     position: fixed;

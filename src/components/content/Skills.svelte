@@ -1,7 +1,8 @@
 <script>
-  // CSS Menu at https://codepen.io/jouanmarcel/pen/NLgVjm
+  // Orginial CSS Menu at https://codepen.io/jouanmarcel/pen/NLgVjm
   // Created by Jouan Marcel
   // https://jouanmarcel.com
+
   export let explainer;
   export let lefter;
   export let left;
@@ -9,52 +10,58 @@
   export let right;
   export let righter;
 
-  
 </script>
 
-<!-- <svelte:body
-document.getElementsByClassName("center").style.backgroundImage = "url('./img/svelte.svg')";
-> -->
-
 <section>
-<div class="skills">
+  <h1>My Skills include...</h1>
+  <div class="skills">
 
-	{#if lefter}
-    <div class="lefter">
-      {#if lefter.icon} <i class="fas fa-home"></i>{/if}
-      {#if lefter.text} <div class="text">{lefter.text}</div> {/if}
-    </div>
-  {/if}
+    {#if lefter}
+      <div class="lefter" style="background-image:url({lefter.image})">
+        {#if lefter.text} <div class="text">{lefter.text}</div> {/if}
+      </div>
+    {/if}
 
-  <div class="left">
-    <div class="text">Web Design</div>
-  </div>
-  <div class="center">
-    <div class="explainer"><span>Hover me</span></div>
-    <div class="text">Frontend Development</div>
+    <div class="left" style="background-image:url({left.image})">
+        {#if left.icon} <i class={left.icon}></i>{/if}
+        {#if left.text} <div class="text">{left.text}</div> {/if}
     </div>
-  <div class="right">
-    <div class="text">Backend Development</div>
+    <div class="center" style="background-image:url({center.image})">
+      <div class="explainer"><span>{explainer}</span></div>
+        {#if center.text} <div class="text">{center.text}</div> {/if}
+      </div>
+    <div class="right" style="background-image:url({right.image})">
+        {#if right.text} <div class="text">{right.text}</div> {/if}
+    </div>
+    <div class="righter" style="background-image:url({righter.image})">
+        {#if righter.text} <div class="text">{righter.text}</div> {/if}
+    </div>
   </div>
-  <div class="righter">
-    <div class="text">SEO</div>
-  </div>
-</div>
 </section>
 
 <style type="text/scss">
 	@import '../../scss/colorscheme.scss';
   section {
+    width: 100%;
     height: 50vh;
 		min-height: 280px;
   }
+	h1 {
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: 2px;
+		line-height: 4rem;
+		padding: 1rem 2rem;
+	}
   .skills {
     display: flex;
+    width: 100%;
     perspective: 10px;
     transform: perspective(300px) rotateX(20deg);
     will-change: perspective;
     perspective-origin: center center;
     transition: all 1.3s ease-out;
+    align-content: stretch;
     justify-content: center;
     transform-style: preserve-3d;
     margin-bottom: 5vh;
@@ -76,8 +83,8 @@ document.getElementsByClassName("center").style.backgroundImage = "url('./img/sv
   }
 
   .left, .center, .right, .lefter, .righter {
-    width: 200px;
-    height: 150px;
+    width: 15vw;
+    height: 15vw;
     transform-style: preserve-3d;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -87,16 +94,22 @@ document.getElementsByClassName("center").style.backgroundImage = "url('./img/sv
     transition-delay: 1s;
     position: relative;
     background-position: center center;
-    background-size: contain;
+    background-size: 75%;
     background-repeat: no-repeat;
     background-color: #58d;
     cursor: pointer;
     background-blend-mode: color-burn;
+    text-align: center;
     
     &:hover {
       box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
-    background-color: #ccf;
+      background-color: rgb(173, 173, 250);
     }
+  }    
+  i {
+    padding: 1vw;
+    width: 14vw;
+    height: 14vw;
   }
   .text {
     transform: translateY(30px);
@@ -111,24 +124,18 @@ document.getElementsByClassName("center").style.backgroundImage = "url('./img/sv
   }
   .lefter {
     transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/organization-512.png);
   }
   .left {
     transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/creative_draw-512.png);
   }
   .center {
     opacity: 1;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/180px-Svelte_Logo.svg.png);
   }
-  //<a title="Rich Harris / MIT (http://opensource.org/licenses/mit-license.php)" href="https://commons.wikimedia.org/wiki/File:Svelte_Logo.svg"><img width="256" alt="Svelte Logo" src=""></a>
   .right {
     transform: translateX(30px) translateZ(-25px) rotateY(5deg);
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/cloud_weather-512.png);
   }
   .righter {
     transform: translateX(60px) translateZ(-50px) rotateY(10deg);
-    background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
   }
   .explainer {
     font-weight: 300;
