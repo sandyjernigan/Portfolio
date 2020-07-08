@@ -10,7 +10,7 @@
 </div>
 
   <span class="arrowHome">
-    <a href="#title">
+    <a href="#home">
       <i class="fas fa-home"></i>
     </a>
   </span>

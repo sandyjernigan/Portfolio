@@ -3,10 +3,15 @@
 	import Section from './Section.svelte'
 	import { info } from '../info.js';
   export let isDarkMode;
+
+  const sections = [ "title", "projects", "skills" ]
 </script>
 	
-<div class="content_inner" class:dark-mode={isDarkMode}>
-	<Section sectionid="title" nextsectionid="projects">
+<div id="home" class="content_inner" class:dark-mode={isDarkMode}>
+
+	<!-- Considering a for loop to transverse each section based on order in sections
+    
+  <Section sectionid="title" nextsectionid="projects">
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
@@ -16,7 +21,7 @@
 
 	<Section sectionid="skills" nextsectionid="history">
 	  <Skills {...info.skills} />
-	</Section>
+	</Section> -->
 
 	<Section sectionid="history" nextsectionid="references">
     <History />
@@ -29,6 +34,7 @@
 	<Section sectionid="footer" nextsectionid="title">
    <div>This page is still in progress. More content to come ...</div>
 	</Section>
+
 </div>
 
 <style type="text/scss">
