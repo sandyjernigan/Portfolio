@@ -27,6 +27,7 @@
     width: 100%;
     height: 96vh;
     padding-left: 5%;
+    margin-top: 100px;
   }
   span {
     position: fixed;

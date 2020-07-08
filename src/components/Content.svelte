@@ -6,10 +6,12 @@
 
   const sections = [ "title", "projects", "skills" ]
 </script>
-	
-<div id="home" class="content_inner" class:dark-mode={isDarkMode}>
 
-	<!-- Considering a for loop to transverse each section based on order in sections
+<div id="home"></div>
+
+<div class="content_inner" class:dark-mode={isDarkMode}>
+
+	<!-- Considering a for loop to transverse each section based on order in sections  -->
     
   <Section sectionid="title" nextsectionid="projects">
 		<Title {...info.title} {isDarkMode} />
@@ -21,7 +23,7 @@
 
 	<Section sectionid="skills" nextsectionid="history">
 	  <Skills {...info.skills} />
-	</Section> -->
+	</Section>
 
 	<Section sectionid="history" nextsectionid="references">
     <History />
@@ -45,6 +47,10 @@
   }
   :global(.dark-mode p){
     color: $dark-color-base;
+  }
+
+  #home {
+    margin-top: -100px;
   }
 
 	.content_inner {
