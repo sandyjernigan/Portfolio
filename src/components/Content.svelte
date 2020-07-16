@@ -42,13 +42,6 @@
 <style type="text/scss">
   @import '../scss/colorscheme.scss';
 
-  :global(p) {
-    color: $color-base;
-  }
-  :global(.dark-mode p){
-    color: $dark-color-base;
-  }
-
   #home {
     margin-top: -100px;
   }

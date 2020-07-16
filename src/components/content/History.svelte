@@ -1,3 +1,9 @@
+<style>
+  /* div {
+    color: var(--color-base);
+  } */
+</style>
+
 <div class="wrapper">
 <section class="block">
   <div class="each-year">

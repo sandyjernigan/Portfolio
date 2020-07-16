@@ -22,7 +22,7 @@
 			<Background {isDarkMode} />
 			<DarkModeButton><i class="fas fa-sun"></i></DarkModeButton>
 		{/if}
-    
+
 		<Content  {isDarkMode} />
 
 	</div>
@@ -93,7 +93,7 @@
 	// Dark Mode
 	main.dark-mode {
 		background-color: $color-bg;
-		color: $color-base;
+		color: $dark-color-base;
 	}
 	.dark-mode {
 		.content {

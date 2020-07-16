@@ -50,12 +50,12 @@
 		align-items: center;
 		flex-flow: row wrap;
 		padding-top: 1rem;
-		color: $color-base;
+		color: var(--color-base);
 		min-height: 280px;
 		padding-bottom: 2vh;
 
 		&.dark-mode {
-			color: $dark-color-base;
+			color: var(--dark-color-base);
 		}
 	}
 
