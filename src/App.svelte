@@ -1,12 +1,9 @@
 <script>
 	import Menu from './components/Menu.svelte'
 	import Home from './components/Home.svelte'
-	import LightMode from './styles/LightMode.svelte'
-	import DarkMode from './styles/Darkmode.svelte'
-	import { darkmode, viewMenu } from './styles.js'
-
 	// Check for Dark Mode
 	let isDarkMode;
+	import { darkmode } from './styles.js'
 	const unsubscribe = darkmode.subscribe(value =>  isDarkMode = value );
 </script>
 
@@ -14,22 +11,25 @@
     <link rel="stylesheet" href="./css/reset.css">
 </svelte:head>
 
-<!-- {#if isDarkMode}
-	<DarkMode />
-{:else}
-	<LightMode />
-{/if} -->
+<!-- <div class="testing">Testing</div> -->
 
-<Menu />
-<Home />
+<Menu {isDarkMode} />
+<Home {isDarkMode} />
 
 <style>
-	:global(:root){
-		--english-green-color: #1B4D3E;
-		--color-base: #212F3D;
-		--color-bg: #EBEDEF;
-		
-		--dark-color-base: #EBEDEF;
-		--dark-color-bg: #212F3D;
+	:global(:root) {
+		--colorbg: #EBEDEF;
+		--colorbase: #212F3D;
+
+		--darkcolorbg: #212F3D;
+		--darkcolorbase: #EBEDEF;
+	}
+	.testing {
+    color: var(--colorbase);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 10em;
+		z-index: 99;
 	}
 </style>

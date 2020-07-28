@@ -25,47 +25,30 @@
 	  <Skills {...info.skills} />
 	</Section>
 
-	<Section sectionid="history" nextsectionid="references">
+	<!-- <Section sectionid="history" nextsectionid="references">
     <History />
-	</Section>
+	</Section> -->
 
 	<Section sectionid="references" nextsectionid="footer">
     <References />
 	</Section>
 
-	<Section sectionid="footer" nextsectionid="title">
-   <div>This page is still in progress. More content to come ...</div>
+	<Section sectionid="end" nextsectionid="title">
+   <div id="footer">This page is still in progress. More content to come ...</div>
 	</Section>
 
 </div>
 
-<style type="text/scss">
-  @import '../scss/colorscheme.scss';
-
+<style>
   #home {
     margin-top: -100px;
   }
-
 	.content_inner {
     min-height: 0;
     height: 50%;
-		
-		// styling
     padding: 0 11% 0 2%;
   }
-  
-	// Dark Mode
-	.dark-mode {
-		background-color: $dark-color-bg;
-		color: $dark-color-base;
-
-		.content_inner {
-			background-color: $dark-color-bg;
-		}
-	}
-
 	#footer {
 		height: 500px;
 	}
-
 </style>

@@ -1,14 +1,10 @@
 <script>
-	import CSS from './Styles.svelte'
 	import Menu from './Menu.svelte'
 	import Content from './Content.svelte'
 	import DarkModeButton from './DarkModeButton.svelte'
 	import Background from './Background.svelte'
-	import { darkmode, viewMenu } from '../styles.js'
-
-	// Check for Dark Mode
-	let isDarkMode;
-	const unsubscribe = darkmode.subscribe(value =>  isDarkMode = value );
+	import { viewMenu } from '../styles.js'
+  export let isDarkMode;
 	let wavesColor = "33, 47, 61";
 </script>
 
@@ -29,8 +25,6 @@
 </main>
 
 <style type="text/scss">
-  @import '../scss/colorscheme.scss';
-
 	// Nav Snap
 	$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 
@@ -40,24 +34,26 @@
 	main {
 		z-index: 9;
 		position: fixed;
-		height: 100%;
-		width: 100%;
+		height: 100vh;
+		width: 100vw;
 		top: 0;
 		left: 0;
-		background-color: $dark-color-bg;
-		color: $dark-color-base;
+		background-color: var(--darkcolorbg);
+		color: var(--darkcolorbase);
 
-    // Scroll Bar
+		// Scroll Bar
+		overflow-x: hidden;
     overflow-y: scroll; // set expected overflow
     scrollbar-width: 0.5em; /* Firefox */
-    scrollbar-color: $dark-color-bg $color-bg;
+    scrollbar-color: var(--darkcolorbg) var(--colorbg);
     &::-webkit-scrollbar {
       width: 0.5em;
-      background-color: $dark-color-bg; /* Chrome/Safari/Webkit */
+      background-color: var(--darkcolorbg); /* Chrome/Safari/Webkit */
     }
     &::-webkit-scrollbar-thumb {
       border-radius: 1em;
-      background-color: lighten($dark-color-bg, 5%);
+			background-color: var(--darkcolorbg);
+			filter: brightness(105%);
       outline: 1px solid slategrey;
     }
 	}
@@ -73,7 +69,7 @@
 		margin: 5em auto 0;
 		transform-origin: top left;
 		transition: transform 1s $snap;
-		background-color: $color-bg;
+		background-color: var(--colorbg);
     overflow: hidden;
 
 		@media (min-width: 640px) {
@@ -92,12 +88,12 @@
   
 	// Dark Mode
 	main.dark-mode {
-		background-color: $color-bg;
-		color: $dark-color-base;
+		background-color: var(--colorbg);
+		color: var(--colorbase);
 	}
 	.dark-mode {
 		.content {
-			background-color: $dark-color-bg;
+			background-color: var(--darkcolorbg);
 		}
 	}
 </style>

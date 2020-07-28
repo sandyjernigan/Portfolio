@@ -15,9 +15,12 @@ $dark-color-light: lighten($color-bg, 60%);
   transform: translateY(-50)
 }
 
+.dark-mode {
+  color: $dark-color-base;
+}
 a {
   color: $color-base;
 }
 .dark-mode a {
-  $dark-color-base: #EBEDEF;
+  color: $dark-color-base;
 }

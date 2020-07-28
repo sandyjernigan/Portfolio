@@ -8,9 +8,7 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p autobuild start:dev",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev",
-    "compile": "nexe server.js -r 'public/**/*.html' --build",
-    "nexe": "nexe -i server.js -o myproject.bin -r 0.10.3 --build"
+    "start:dev": "sirv public --single --dev"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^12.0.0",

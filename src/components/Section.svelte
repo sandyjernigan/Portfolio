@@ -2,9 +2,10 @@
   import ScrollNext from "./ScrollNext.svelte";
   export let sectionid;
   export let nextsectionid;
+	export let isDarkMode;
 </script>
 
-<div id={sectionid}>
+<div id={sectionid} class:dark-mode={isDarkMode}>
   <slot></slot>
   <ScrollNext nextsectionid={nextsectionid} />
 </div>
@@ -15,9 +16,7 @@
     </a>
   </span>
 
-<style type="text/scss">
-  @import '../scss/colorscheme.scss';
-  
+<style type="text/scss">  
   div {
     display: flex;
     flex-wrap: wrap;
@@ -29,16 +28,10 @@
     padding-left: 5%;
     margin-top: 100px;
   }
-  span {
+  .arrowHome {
     position: fixed;
     bottom: 20px;
     right: 20px;
     font-size: 2em;
-    
-    a {
-      text-shadow: 1px 1px 2px $color-bg, -1px -1px 2px $color-bg;
-    }
   }
-
-
 </style>

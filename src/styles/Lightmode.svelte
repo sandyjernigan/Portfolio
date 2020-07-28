@@ -1,13 +1,30 @@
 <style>
-	:global(:root){
-		--english-green-color: #1B4D3E;
-		--color-base: #212F3D;
-		--color-bg: #EBEDEF;
-		
-		--dark-color-base: #EBEDEF;
-		--dark-color-bg: #212F3D;
+	:global(:root) {
+		--colorbg: #EBEDEF;
+		--colorbase: #212F3D;
 	}
-  :global(p) {
-    color: var(--color-base);
+  /* :global(body) {
+    color: var(--colorbase);
   }
+  :global(div) {
+    color: var(--colorbase);
+  }
+  :global(p) {
+    color: var(--colorbase);
+  }
+  :global(a) {
+    color: var(--colorbase);
+  }
+  :global(i) {
+    color: var(--colorbg);
+    text-shadow: 1px 1px 2px var(--colorbase), -1px -1px 2px var(--colorbase);
+  }
+  
+	:global(.dark-mode) {
+		background-color: var(--colorbg);
+		color: var(--colorbase); 
+	}
+  :global(.dark-mode .content_inner) {
+    background-color: var(--colorbg);
+  } */
 </style>

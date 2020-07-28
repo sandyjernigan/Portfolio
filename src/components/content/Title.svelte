@@ -1,5 +1,5 @@
 <script>
-	import { Quote } from './index.js';
+	import Quote from './Quote.svelte';
 	export let name;
 	export let title;
 	export let profileImg;
@@ -42,7 +42,7 @@
 </section>
 
 <style type="text/scss">
-	@import '../../scss/colorscheme.scss';
+	// @import '../../scss/colorscheme.scss';
 
 	section {
 		display: flex;
@@ -50,12 +50,12 @@
 		align-items: center;
 		flex-flow: row wrap;
 		padding-top: 1rem;
-		color: var(--color-base);
+		color: var(--colorbase);
 		min-height: 280px;
 		padding-bottom: 2vh;
 
 		&.dark-mode {
-			color: var(--dark-color-base);
+			color: var(--darkcolorbase);
 		}
 	}
 
@@ -114,7 +114,7 @@
 	}
 
 	i {
-		color: $color-base;
+		color: var(--colorbase);
 		filter:opacity(20%);
 		letter-spacing: 2rem;
 	}
@@ -125,7 +125,10 @@
 
 	// Dark Mode
 	.dark-mode i {
-		color: $dark-color-base;
+		color: var(--darkcolorbase);
+	}
+	.dark-mode p {
+		color: var(--darkcolorbase);
 	}
 
   /*Shrinking for mobile*/
