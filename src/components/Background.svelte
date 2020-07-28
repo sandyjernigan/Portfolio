@@ -33,9 +33,7 @@
   <!--Waves end-->
 </div>
 
-<style type="text/scss">
-  @import '../scss/colorscheme.scss';
-  
+<style type="text/scss">  
   .background {
     width: 100%;
     left: 0;

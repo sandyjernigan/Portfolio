@@ -11,7 +11,6 @@
 </script>
 
 <section class:dark-mode={isDarkMode}>
-
 	<div class="title">	
 		<div class="profileImage">
 			<img src={profileImg} alt="Profile" />
@@ -42,26 +41,18 @@
 </section>
 
 <style type="text/scss">
-	// @import '../../scss/colorscheme.scss';
-
 	section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
 		padding-top: 1rem;
-		color: var(--colorbase);
 		min-height: 280px;
 		padding-bottom: 2vh;
-
-		&.dark-mode {
-			color: var(--darkcolorbase);
-		}
+		color: var(--colorbase);
 	}
-
 	.title {
 		display: flex;
-		// flex-flow: column wrap;
 		justify-content: center;
 		align-items: center;
 	}
@@ -124,10 +115,10 @@
 	}
 
 	// Dark Mode
-	.dark-mode i {
+	.dark-mode {
 		color: var(--darkcolorbase);
 	}
-	.dark-mode p {
+	.dark-mode i {
 		color: var(--darkcolorbase);
 	}
 

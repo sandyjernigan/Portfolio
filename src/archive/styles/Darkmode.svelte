@@ -25,8 +25,17 @@
   } */
 </style>
 
-color: var(--colorbase)
+color: var(--colorbase);
 color: var(--darkcolorbase);
 
 background-color: var(--colorbg);
 background-color: var(--darkcolorbg);
+
+
+	:global(:root) {
+		--colorbg: #EBEDEF;
+		--colorbase: #212F3D;
+
+		--darkcolorbg: #212F3D;
+		--darkcolorbase: #EBEDEF;
+	}

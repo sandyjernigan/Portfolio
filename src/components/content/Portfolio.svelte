@@ -1,4 +1,8 @@
-<div class="portfolio">
+<script>
+	export let isDarkMode;
+</script>
+
+<div class:dark-mode={isDarkMode}>
 
 	<p>This site is made using <a href="https://svelte.dev/">Svelte</a>.
 
@@ -7,10 +11,20 @@
 </div>
 
 <style>
+	div {
+		padding-bottom: 10vh;
+		color: var(--colorbase);
+	}
 	p {
 		filter: grayscale(50%);
 		font-weight: bold;
 		font-size: 2rem;
+	}
+	.dark-mode {
+		color: var(--darkcolorbase);
+	}
+	.dark-mode a {
+		color: var(--darkcolorbase);
 	}
 
   /*Shrinking for mobile*/

@@ -14,11 +14,10 @@
 </button>
 
 <style type="text/scss">
-	@import '../scss/colorscheme.scss';
 	
 	button {
-		background-color: $color-bg;
-		color: $color-base;
+		background-color: var(--colorbg);
+		color: var(--colorbase);
 		border: none;
 		border-radius: 4px;
 		padding: 0.5rem;
@@ -30,7 +29,7 @@
 		
 	}
 	button.dark-mode {
-		background-color: $dark-color-bg;
-		color: $dark-color-base;
+		background-color: var(--darkcolorbg);
+		color: var(--darkcolorbase);
 	}
 </style>

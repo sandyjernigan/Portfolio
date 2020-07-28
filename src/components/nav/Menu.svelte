@@ -1,5 +1,6 @@
 <script>
-	import { viewMenu, darkmode } from '../styles.js'
+	import { viewMenu } from '../../styles.js'
+  export let isDarkMode;
 
   // Menu click event
   function handleMenuClick() { 
@@ -7,7 +8,7 @@
   };
 </script>
 
-<nav class:dark-mode={$darkmode} class:viewMenu={$viewMenu} on:click={handleMenuClick}>
+<nav class:dark-mode={isDarkMode} class:viewMenu={$viewMenu} on:click={handleMenuClick}>
   <span class="menu_toggle">
     <i class="menu_open fa fa-bars fa-lg"></i>
     <i class="menu_close fa fa-times fa-lg"></i>
@@ -21,7 +22,6 @@
 
 <style type="text/scss">
 	// Color Scheme
-  @import '../scss/colorscheme.scss';
   @import '../scss/animations.scss';
   
   $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
@@ -43,7 +43,7 @@
     cursor: pointer;
     width: 100px;
     height: 80px;
-    background-color: $color-bg;
+    background-color: var(--colorbg);
     border-bottom-right-radius: 100%;
     
     &:active {
@@ -52,7 +52,7 @@
       }
     }  
     i {
-      color: $color-base;
+      color: var(--colorbase);
     }
     .menu_open,
     .menu_close {
@@ -99,20 +99,21 @@
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: darken($dark-color-base, 30%);
+      color: var(--darkcolorbase);
+      filter: brightness(85%);
       transition: color .2s;
       
       .icon {
         position: relative;
         display: inline-block;
         margin-right: 20px;
-        color: $dark-color-base;
+        color: var(--darkcolorbase);
       }      
       &:hover {
         filter: grayscale(80%);
         filter: brightness(200%);
         
-        color: $dark-color-base;
+        color: var(--darkcolorbase);
       }
       &:active {
         .icon {
@@ -126,31 +127,32 @@
   // Dark Mode
   nav.dark-mode {
     .menu_toggle {
-      background-color: $dark-color-bg;
+      background-color: var(--darkcolorbg);
       i {
-        color: $dark-color-base;
+        color: var(--darkcolorbase);
       }
     }
     .menu_items {
       a {
-        color: darken($color-base, 30%);        
+        color: var(--colorbase);
+        filter: brightness(85%);      
         .icon {
-          color: $color-base;
+          color: var(--colorbase);
           &:after {
-            border: 2px solid $color-base;
+            border: 2px solid var(--colorbase);
           }
         }        
         &:hover {
-          color: $color-base;
+          color: var(--colorbase);
           .icon {
             &:after {
-              border-color: $color-base;
+              border-color: var(--colorbase);
             }
           }
         }
         &:active {
           .icon {
-            color: $color-base;
+            color: var(--colorbase);
           }
         }
       }

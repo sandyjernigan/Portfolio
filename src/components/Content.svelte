@@ -1,6 +1,7 @@
 <script>
 	import { Title, Portfolio, Skills, History, References } from './content/index.js'	
 	import Section from './Section.svelte'
+	import ScrollHome from './nav/ScrollHome.svelte'
 	import { info } from '../info.js';
   export let isDarkMode;
 
@@ -18,11 +19,11 @@
 	</Section>
   
 	<Section sectionid="projects" nextsectionid="skills">
-    <Portfolio {...info.portfolio} />
+    <Portfolio {...info.portfolio} {isDarkMode} />
 	</Section>
 
 	<Section sectionid="skills" nextsectionid="history">
-	  <Skills {...info.skills} />
+	  <Skills {...info.skills} {isDarkMode} />
 	</Section>
 
 	<!-- <Section sectionid="history" nextsectionid="references">
@@ -36,6 +37,8 @@
 	<Section sectionid="end" nextsectionid="title">
    <div id="footer">This page is still in progress. More content to come ...</div>
 	</Section>
+
+	<ScrollHome />
 
 </div>
 

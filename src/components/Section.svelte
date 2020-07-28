@@ -1,23 +1,16 @@
 <script>
-  import ScrollNext from "./ScrollNext.svelte";
+  import ScrollNext from "./nav/ScrollNext.svelte";
   export let sectionid;
   export let nextsectionid;
-	export let isDarkMode;
 </script>
 
-<div id={sectionid} class:dark-mode={isDarkMode}>
+<section id={sectionid}>
   <slot></slot>
   <ScrollNext nextsectionid={nextsectionid} />
-</div>
-
-  <span class="arrowHome">
-    <a href="#home">
-      <i class="fas fa-home"></i>
-    </a>
-  </span>
+</section>
 
 <style type="text/scss">  
-  div {
+  section {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -26,12 +19,6 @@
     width: 100%;
     height: 96vh;
     padding-left: 5%;
-    margin-top: 100px;
-  }
-  .arrowHome {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 2em;
+    padding-top: 100px;
   }
 </style>

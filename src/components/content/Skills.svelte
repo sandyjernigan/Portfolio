@@ -21,9 +21,7 @@
         {#if lefter.text} <div class="text">{lefter.text}</div> {/if}
       </div>
     {/if}
-
     <div class="left" style="background-image:url({left.image})">
-        {#if left.icon} <i class={left.icon}></i>{/if}
         {#if left.text} <div class="text">{left.text}</div> {/if}
     </div>
     <div class="center" style="background-image:url({center.image})">
@@ -40,7 +38,6 @@
 </section>
 
 <style type="text/scss">
-	@import '../../scss/colorscheme.scss';
   section {
     width: 100%;
     height: 50vh;
@@ -153,8 +150,6 @@
     justify-content: center;
     align-items: center;
   }
-
-
   .ref {
     background-color: #000;
     background-image: linear-gradient(to bottom, #d80, #c00);

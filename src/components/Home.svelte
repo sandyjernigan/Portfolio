@@ -1,5 +1,4 @@
 <script>
-	import Menu from './Menu.svelte'
 	import Content from './Content.svelte'
 	import DarkModeButton from './DarkModeButton.svelte'
 	import Background from './Background.svelte'
@@ -82,7 +81,7 @@
 		border: 5px inset darkgray;
 		
 		.dark-mode {
-			border: 5px inset lightgrey;
+			border: 1px inset lightgrey;
 		}
   }
   

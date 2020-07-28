@@ -8,9 +8,7 @@
   </a>
 </div>
 
-<style type="text/scss">
-  @import '../scss/colorscheme.scss';
-  
+<style type="text/scss">  
   div {
 		display: inline-block;
     left: 50%;
@@ -18,13 +16,12 @@
     padding-top: 5vh;
   }
   a {
-    text-shadow: 2px 2px 5px $color-bg, -2px -2px 5px $color-bg;
+    color: var(--colorbase);
+    text-shadow: 2px 2px 5px var(--colorbg), -2px -2px 5px var(--colorbg);
   }
   i {
     top: 0;
     transition: top ease 0.5s;
-    // padding: 10px;
-    // padding-left: 10%;
   }
   i:hover {
     -moz-animation: bounce 1.5s infinite;

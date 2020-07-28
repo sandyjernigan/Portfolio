@@ -1,5 +1,5 @@
 <script>
-	import Menu from './components/Menu.svelte'
+	import Menu from './components/nav/Menu.svelte'
 	import Home from './components/Home.svelte'
 	// Check for Dark Mode
 	let isDarkMode;
@@ -24,12 +24,18 @@
 		--darkcolorbg: #212F3D;
 		--darkcolorbase: #EBEDEF;
 	}
-	.testing {
+	/* :global(div) {
+		color: var(--colorbase);
+	}
+	:global(.dark-mode) {
+		color: var(--darkcolorbase);
+	} */
+	/* .testing {
     color: var(--colorbase);
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		font-size: 10em;
 		z-index: 99;
-	}
+	} */
 </style>
