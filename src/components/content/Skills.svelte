@@ -9,13 +9,13 @@
   export let center;
   export let right;
   export let righter;
+  export let isDarkMode;
 
 </script>
 
-<section>
+<section class:dark-mode={isDarkMode}>
   <h1>My Skills include...</h1>
-  <div class="skills">
-
+  <div class="skills" class:dark-mode={isDarkMode}>
     {#if lefter}
       <div class="lefter" style="background-image:url({lefter.image})">
         {#if lefter.text} <div class="text">{lefter.text}</div> {/if}
