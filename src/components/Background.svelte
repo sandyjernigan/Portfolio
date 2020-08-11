@@ -1,3 +1,19 @@
+<script>  
+  // Set Primary Color
+  export let bgColor = "235,237,239"
+
+	// Check for Dark Mode
+  // export let isDarkMode;
+
+  // Set Colors
+  let bgColor0 ="rgba(" + bgColor + ",1)"
+  let bgColor1 ="rgba(255,255,255,0.1)"
+  let bgColor2 ="rgba(255,255,255,0.2)"
+  let bgColor3 ="rgba(" + bgColor + ",0.3)"
+  let bgColor4 ="rgba(" + bgColor + ",0.4)"
+  // }
+</script>
+
 <div class="background">
   <!--Waves Container-->
   <div class="header">
@@ -6,28 +22,31 @@
         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
       </defs>
       <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        <use xlink:href="#gentle-wave" x="48" y="0" fill={bgColor1} />
+        <use xlink:href="#gentle-wave" x="48" y="0" fill={bgColor2} />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill={bgColor3} />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill={bgColor4} />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill={bgColor0} />
       </g>
     </svg>
   </div>
   <!--Waves end-->
 </div>
 
-<style>
+<style type="text/scss">  
   .background {
-    position: absolute;
     width: 100%;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     z-index: -1;
   }
   .header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
     text-align: center;
-    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    background: linear-gradient(60deg, rgb(64, 77, 195) 0%, rgba(0, 172, 193, 1) 100%);
   }
   .waves {
     position: relative;
@@ -69,8 +88,8 @@
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
     .waves {
-      height: 40px;
-      min-height: 40px;
+      height: 80px;
+      min-height: 80px;
     }
   }
 </style>

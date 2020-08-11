@@ -3,7 +3,7 @@
 	export let quoteby;
 </script>
 
-<div>
+<div class="quote">
   <div class="header-quote">
     <blockquote>
       {quote}
@@ -19,6 +19,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+  }
+
+  div.quote {
+    padding-bottom: 1rem;
   }
 
   @import url(https://fonts.googleapis.com/css?family=Bitter);
@@ -87,4 +91,12 @@
       color: #999
     }
   }
+
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    div.quote {
+      padding: 1rem;
+    }
+  }
+
 </style>

@@ -1,0 +1,36 @@
+// Animate - Fill Mode Both
+@mixin animate($duration) {
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+  // Fade In       
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  @mixin fadeIn($duration) {
+    @include animate($duration);
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  // Fade Out
+  @-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  @mixin fadeOut($duration) {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }
