@@ -1,10 +1,13 @@
+<script>
+  export let isDarkMode;
+</script>
 <style>
-  /* div {
-    color: var(--color-base);
-  } */
+  .dark-mode div {
+    color: var(--darkcolorbase);
+  }
 </style>
 
-<div class="wrapper">
+<div class="wrapper" class:dark-mode={isDarkMode}>
 <section class="block">
   <div class="each-year">
     <div class="title">2016</div>

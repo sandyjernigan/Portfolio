@@ -22,13 +22,13 @@
     <Portfolio {...info.portfolio} {isDarkMode} />
 	</Section> -->
 
-	<Section sectionid="skills" nextsectionid="history">
+	<!-- <Section sectionid="skills" nextsectionid="history">
 	  <Skills {...info.skills} {isDarkMode} />
-	</Section>
-
-	<!-- <Section sectionid="history" nextsectionid="references">
-    <History />
 	</Section> -->
+
+	<Section sectionid="history" nextsectionid="references">
+    <History {...info.history} {isDarkMode} />
+	</Section>
 
 	<Section sectionid="references" nextsectionid="footer">
     <References />

@@ -160,20 +160,4 @@
     justify-content: center;
     align-items: center;
   }
-  .ref {
-    background-color: #000;
-    background-image: linear-gradient(to bottom, #d80, #c00);
-    border-radius: 3px;
-    padding: 7px 10px;
-    position: absolute;
-    font-size: 16px;
-    bottom: 10px;
-    right: 10px;
-    color: #212F3D;
-    text-decoration: none;
-    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
-    &::first-letter {
-      font-size: 12px;
-    }
-  }
 </style>
