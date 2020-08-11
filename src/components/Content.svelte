@@ -14,13 +14,13 @@
 
 	<!-- Considering a for loop to transverse each section based on order in sections  -->
     
-  <Section sectionid="title" nextsectionid="projects">
+  <!-- <Section sectionid="title" nextsectionid="projects">
 		<Title {...info.title} {isDarkMode} />
 	</Section>
   
 	<Section sectionid="projects" nextsectionid="skills">
     <Portfolio {...info.portfolio} {isDarkMode} />
-	</Section>
+	</Section> -->
 
 	<Section sectionid="skills" nextsectionid="history">
 	  <Skills {...info.skills} {isDarkMode} />

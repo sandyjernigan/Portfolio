@@ -15,7 +15,7 @@
 
 <section class:dark-mode={isDarkMode}>
   <h1>My Skills include...</h1>
-  <div class="skills" class:dark-mode={isDarkMode}Time>
+  <div class="skills" class:dark-mode={isDarkMode}>
     {#if lefter}
       <div class="lefter" style="background-image:url({lefter.image})">
         {#if lefter.text} <div class="text">{lefter.text}</div> {/if}
@@ -44,12 +44,16 @@
 		min-height: 280px;
   }
 	h1 {
+    color: var(--colorbase);
 		font-size: 2rem;
 		font-weight: 300;
 		letter-spacing: 2px;
 		line-height: 4rem;
 		padding: 1rem 2rem;
 	}
+  .dark-mode h1 {
+    color: var(--darkcolorbase);
+  }
   .skills {
     display: flex;
     width: 100%;
@@ -84,8 +88,7 @@
     height: 15vw;
     transform-style: preserve-3d;
     border-radius: 10px;
-    border: 1px solid #fff;
-    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+    border: 2px solid var(--colorbase);
     opacity: 0;
     transition: all .3s ease;
     transition-delay: 1s;
@@ -93,16 +96,20 @@
     background-position: center center;
     background-size: 75%;
     background-repeat: no-repeat;
-    background-color: #58d;
+    background-color: rgba(100, 100, 255, .4);
     cursor: pointer;
-    background-blend-mode: color-burn;
+    background-blend-mode: hard-light;
     text-align: center;
     
     &:hover {
-      box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
-      background-color: rgb(173, 173, 250);
+      box-shadow: 0 0 15px 5px rgba(100, 100, 255, .6);
+      background-color: rgba(100, 100, 255, .8);
     }
-  }    
+  }
+  .dark-mode .left, .dark-mode .center, .dark-mode .right, .dark-mode .lefter, .dark-mode .righter {
+    background-color: rgba(100, 100, 255, .8);
+    border: 2px solid var(--darkcolorbase);
+  }
   i {
     padding: 1vw;
     width: 14vw;
@@ -116,8 +123,11 @@
     left: 5px;
     position: absolute;
     will-change: transform;
-    color: #fff;
+    color: var(--colorbase);
     text-shadow: 0 0 5px rgba(100, 100, 255, .6)
+  }
+  .dark-mode .text {
+    color: var(--darkcolorbase);
   }
   .lefter {
     transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
@@ -159,7 +169,7 @@
     font-size: 16px;
     bottom: 10px;
     right: 10px;
-    color: #fff;
+    color: #212F3D;
     text-decoration: none;
     text-shadow: 0 0 3px rgba(0, 0, 0, .4);
     &::first-letter {
