@@ -27,7 +27,7 @@
 	</Section> -->
 
 	<Section sectionid="history" nextsectionid="references">
-    <History {...info.history} {isDarkMode} />
+    <History timeline = {info.timeline} {isDarkMode} />
 	</Section>
 
 	<Section sectionid="references" nextsectionid="footer">
