@@ -33,7 +33,7 @@ export const info = {
       image: "./img/logo/python.png"
     }
   },
-  history: [
+  timeline: [
     {
       year: "Present",
       events: [
