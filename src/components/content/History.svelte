@@ -1,23 +1,27 @@
 <script>
+  import Event from "./Event.svelte";
   export let isDarkMode;
   export let timeline;
+
+  // Right or Left Side: True for Left, False for Right
+  let rightorleft = true;
 </script>
 
-<div class="timeline" class:dark-mode={isDarkMode}>
-  <div class="year"><h2>{timeline[0].year}</h2></div>
 
-  <div class="container left">
-    <div class="content"> 
-      <h2>{timeline[0].year}</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2016</h2>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
+<div class="timeline" class:dark-mode={isDarkMode}></div>
+
+<div class="events" class:dark-mode={isDarkMode}>
+  <!-- Loop thru timeline from info.js -->
+  {#each timeline as year}
+  <!-- Display Title or Year -->
+  <div class="year"><h2>{year.year}</h2></div>
+
+    <!-- Loop thru year, get each event in that year -->
+    {#each year.events as details}
+      <Event {...details} {isDarkMode} />
+      <div class="clear"></div>
+    {/each}
+  {/each}
 </div>
 
 
@@ -29,12 +33,27 @@
     color: var(--darkcolorbase);
   }
 
+  .events {
+    position: fixed;
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .events::-webkit-scrollbar {
+    display: none;
+  }
+
   /* The actual timeline (the vertical ruler) */
   .timeline {
-    position: relative;
-    max-width: 1200px;
-    width: 100%;
+    position: fixed;
+    max-width: 1000px;
+    width: 80%;
     margin: 0 auto;
+    height: 80%;
   }
 
   /* The actual timeline (the vertical ruler) */
@@ -54,81 +73,7 @@
     background-color: var(--darkcolorbase);
     background-image: linear-gradient(var(--darkcolorbg), var(--darkcolorbase) 15%, var(--darkcolorbase) 70%, var(--darkcolorbase), var(--darkcolorbg));
   }
-
-  /* Container around content */
-  .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-
-  /* The circles on the timeline */
-  .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: var(--colorbase);
-    border: 4px solid var(--green);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .dark-mode .container::after {
-    background-color: var(--darkcolorbase);
-    border: 4px solid var(--orange);
-  }
-
-  /* Place the container to the left */
-  .left {
-    left: 0;
-  }
-
-  /* Place the container to the right */
-  .right {
-    left: 50%;
-  }
-
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid var(--colorbase);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--colorbase);
-  }
-  .dark-mode .left::before {
-    border-color: transparent transparent transparent var(--darkcolorbase);
-  }
-
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid var(--colorbase);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--colorbase) transparent transparent;
-  }
-  .dark-mode .right::before {
-    border-color: transparent var(--darkcolorbase) transparent transparent;
-  }
-
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -16px;
-  }
+  .clear { clear:both; display:block; overflow:hidden; visibility:hidden; height:0px;}
 
   /* Year Container */
   .year {
@@ -154,25 +99,12 @@
     font-weight: bolder;
     text-align: center;
     white-space: nowrap;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-shadow: 1px 1px 5px var(--colorbg), 0 0 25px var(--colorbg), -1px -1px 5px var(--purple), 0 0 20px var(--colorbg);
   }
   .dark-mode div.year h2 {
     color: var(--darkprimarycolor);
     filter: brightness(150%);
-    text-shadow: 1px 1px 5px black, 0 0 25px var(--darkcompcolor), -1px -1px 5px var(--darkcolorbg), 0 0 20px var(--darkcolorbg);
-  }
-
-  /* The actual content */
-  .content {
-    padding: 20px 30px;
-    color: var(--colorbg);
-    background-color: var(--colorbase);
-    position: relative;
-    border-radius: 6px;
-  }
-  .dark-mode .content {
-    color: var(--darkcolorbg);
-    background-color: var(--darkcolorbase);
+    text-shadow: 1px 1px 5px black, 0 0 25px var(--darkpurple), -1px -1px 5px var(--darkcolorbg), 0 0 10px var(--darkcolorbg);
   }
 
   /* Media queries - Responsive timeline on screens less than 600px wide */
