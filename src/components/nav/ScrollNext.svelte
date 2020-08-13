@@ -10,8 +10,9 @@
 
 <style type="text/scss">  
   div {
-		display: inline-block;
-    left: 50%;
+    position: relative;
+		display: block;
+    left: 0;
     font-size: 3em;
     padding-top: 5vh;
   }
