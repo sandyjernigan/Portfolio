@@ -1,5 +1,5 @@
 <script>
-	import { Title, Portfolio, Skills, History, References } from './content/index.js';
+	import { Title, Portfolio, Skills, Timeline, References } from './content/index.js';
 	import Section from './Section.svelte';
   import ScrollNext from "./nav/ScrollNext.svelte";
 	import ScrollHome from './nav/ScrollHome.svelte';
@@ -10,7 +10,7 @@
 		{ selectComponent: 'title', component: Title, contents: info.title },
 		{ selectComponent: 'portfolio', component: Portfolio, contents: info.portfolio },
 		{ selectComponent: 'skills', component: Skills, contents: info.skills },
-		{ selectComponent: 'history', component: History, contents: info.timeline },
+		{ selectComponent: 'timeline', component: Timeline, contents: info.timeline },
 		{ selectComponent: 'references', component: References, contents: info.references },
 	]
 	let selected = options[0];
@@ -55,7 +55,7 @@
 	.selection {
 		position: absolute;
 		top: 100px;
-		left: 50%;
+		right: 10px;
 		z-index: 99;
 	}
 	#footer {
