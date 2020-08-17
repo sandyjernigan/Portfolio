@@ -1,10 +1,12 @@
 <script>
 	import { Title, Portfolio, Skills, Timeline, References } from './content/index.js';
 	import Section from './Section.svelte';
-  import ScrollNext from "./nav/ScrollNext.svelte";
+  import Options from "./nav/Options.svelte";
 	import ScrollHome from './nav/ScrollHome.svelte';
 	import { info } from '../info.js';
-  export let isDarkMode;
+	export let isDarkMode;
+	
+  import { option } from './nav/options.js';
 
   const options = [
 		{ selectComponent: 'title', component: Title, contents: info.title },
@@ -14,16 +16,18 @@
 		{ selectComponent: 'references', component: References, contents: info.references },
 	]
 	let selected = options[0];
+	
 </script>
 
 <div id="home"></div>
 
 <div class="content_inner" class:dark-mode={isDarkMode}>
 
-	<!-- Considering a for loop to transverse each section based on order in sections  -->
+	<!-- <Options {isDarkMode} /> -->
 
 	<!-- Use Bind to Select which Component Loads -->
 	<div class="selection">
+		
 		<select bind:value={selected}>
 			{#each options as option}
 				<option value={option}>{option.selectComponent}</option>
@@ -32,6 +36,7 @@
 	</div>
 
 	<Section sectionid={selected.selectComponent}>
+	{option}
 		<svelte:component this={selected.component} {...selected.contents} {isDarkMode}/>
 	</Section>
 

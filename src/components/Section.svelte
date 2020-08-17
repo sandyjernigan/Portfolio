@@ -1,7 +1,5 @@
 <script>
-  import ScrollNext from "./nav/ScrollNext.svelte";
   export let sectionid;
-  export let nextsectionid;
 </script>
 
 <section id={sectionid}>

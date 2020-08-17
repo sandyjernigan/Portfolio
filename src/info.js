@@ -36,8 +36,7 @@ export const info = {
   portfolio: {},
   timeline: {
     timeline: [
-      {
-        year: "Present",
+      { year: "Present",
         events: [
           {
             type: "employment",
@@ -50,8 +49,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2020",
+      { year: "2020",
         events: [
           {
             type: "employment",
@@ -64,8 +62,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2017",
+      { year: "2017",
         events: [
           {
             type: "employment",
@@ -87,8 +84,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2015",
+      { year: "2015",
         events: [
           {
             type: "employment",
@@ -110,8 +106,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2008",
+      { year: "2008",
         events: [
           {
             type: "employment",
@@ -123,8 +118,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2005",
+      { year: "2005",
         events: [
           {
             type: "education",
@@ -136,8 +130,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2004",
+      { year: "2004",
         events: [
           {
             type: "employment",
@@ -150,8 +143,7 @@ export const info = {
           }
         ]
       },
-      {
-        year: "2002",
+      { year: "2002",
         events: [
           {
             type: "education",
