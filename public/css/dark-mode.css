@@ -1,0 +1,20 @@
+	/*
+	Color Selector Sites
+	https://www.sessions.edu/color-calculator/
+	https://www.sessions.edu/color-calculator-results/?colors=212f3d,3d3a21,3d2128
+	https://htmlcolorcodes.com/color-picker/
+	*/
+
+	html,
+	body {
+		height: 100%;
+		overflow: hidden;
+		scroll-behavior: smooth;
+	}
+
+	:root {
+		--colorbg: #212F3D;
+		--colorbase: #EBEDEF;
+		--primarycolor: #3e5671;
+		--monocolor: #1e3a57;
+	}

@@ -1,4 +1,6 @@
 <script>
+  // Idea for Mobile Menu from: https://codepen.io/karlovidek/pen/aNYWKE/
+  
 	import { viewMenu } from '../../styles.js'
   export let isDarkMode;
 

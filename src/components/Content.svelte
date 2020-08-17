@@ -1,12 +1,19 @@
 <script>
-	import { Title, Portfolio, Skills, History, References } from './content/index.js'	
-	import Section from './Section.svelte'
+	import { Title, Portfolio, Skills, History, References } from './content/index.js';
+	import Section from './Section.svelte';
   import ScrollNext from "./nav/ScrollNext.svelte";
-	import ScrollHome from './nav/ScrollHome.svelte'
+	import ScrollHome from './nav/ScrollHome.svelte';
 	import { info } from '../info.js';
   export let isDarkMode;
 
-  const sections = [ "title", "projects", "skills" ]
+  const options = [
+		{ selectComponent: 'title', component: Title, contents: info.title },
+		{ selectComponent: 'portfolio', component: Portfolio, contents: info.portfolio },
+		{ selectComponent: 'skills', component: Skills, contents: info.skills },
+		{ selectComponent: 'history', component: History, contents: info.timeline },
+		{ selectComponent: 'references', component: References, contents: info.references },
+	]
+	let selected = options[0];
 </script>
 
 <div id="home"></div>
@@ -14,25 +21,18 @@
 <div class="content_inner" class:dark-mode={isDarkMode}>
 
 	<!-- Considering a for loop to transverse each section based on order in sections  -->
-    
-  <Section sectionid="title" nextsectionid="projects">
-		<Title {...info.title} {isDarkMode} />
-	</Section>
-  
-	<Section sectionid="projects" nextsectionid="skills">
-    <Portfolio {...info.portfolio} {isDarkMode} />
-	</Section>
 
-	<Section sectionid="skills" nextsectionid="history">
-	  <Skills {...info.skills} {isDarkMode} />
-	</Section>
+	<!-- Use Bind to Select which Component Loads -->
+	<div class="selection">
+		<select bind:value={selected}>
+			{#each options as option}
+				<option value={option}>{option.selectComponent}</option>
+			{/each}
+		</select>
+	</div>
 
-	<Section sectionid="history" nextsectionid="references">
-    <History timeline = {info.timeline} {isDarkMode} />
-	</Section>
-
-	<Section sectionid="references" nextsectionid="footer">
-    <References />
+	<Section sectionid={selected.selectComponent}>
+		<svelte:component this={selected.component} {...selected.contents} {isDarkMode}/>
 	</Section>
 
 	<Section sectionid="end" nextsectionid="title">
@@ -51,7 +51,13 @@
     min-height: 0;
     height: 50%;
     padding: 0 11% 0 2%;
-  }
+	}
+	.selection {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		z-index: 99;
+	}
 	#footer {
 		height: 500px;
 	}

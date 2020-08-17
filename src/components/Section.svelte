@@ -6,7 +6,6 @@
 
 <section id={sectionid}>
   <slot></slot>
-  <ScrollNext nextsectionid={nextsectionid} />
 </section>
 
 <style type="text/scss">  
