@@ -6,7 +6,7 @@
 	import { info } from '../info.js';
 	export let isDarkMode;
 	
-  import { option } from './nav/options.js';
+  // import { option } from './nav/options.js';
 
   const options = [
 		{ selectComponent: 'title', component: Title, contents: info.title },
@@ -15,7 +15,7 @@
 		{ selectComponent: 'timeline', component: Timeline, contents: info.timeline },
 		{ selectComponent: 'references', component: References, contents: info.references },
 	]
-	let selected = options[0];
+	let selected = options[1];
 	
 </script>
 
@@ -36,7 +36,6 @@
 	</div>
 
 	<Section sectionid={selected.selectComponent}>
-	{option}
 		<svelte:component this={selected.component} {...selected.contents} {isDarkMode}/>
 	</Section>
 

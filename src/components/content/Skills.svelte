@@ -2,7 +2,6 @@
   // Orginial CSS Menu at https://codepen.io/jouanmarcel/pen/NLgVjm
   // Created by Jouan Marcel
   // https://jouanmarcel.com
-  // Other Idea for Skills: https://codepen.io/uiswarup/full/ZEbVJEa
 
   export let explainer;
   export let lefter;

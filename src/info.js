@@ -33,7 +33,38 @@ export const info = {
       image: "./img/logo/python.png"
     }
   },
-  portfolio: {},
+  portfolio: {
+    projects: [
+      {
+        link: "http://www.sandyjernigan.com",
+        header: "Portfolio",
+        projectList: [
+          "made using Svelte"
+        ],
+        bgStyle: "background-image: url(./img/projects/portfolio.png);",
+        description: "This project was made using Svelte.",
+        additional: "Portfolio"
+      },
+      {
+        link: "",
+        header: "Introduction to User Interface",
+        projectList: [
+          ""
+        ],
+        bgStyle: "",
+        description: ""
+      },
+      {
+        link: "",
+        header: "Introduction to User Interface",
+        projectList: [
+          ""
+        ],
+        bgStyle: "",
+        description: ""
+      }
+    ]
+  },
   timeline: {
     timeline: [
       { year: "Present",

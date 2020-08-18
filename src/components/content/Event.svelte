@@ -14,27 +14,29 @@
 
 <div class="container left" class:dark-mode={isDarkMode}>
   <!-- Type will determine style of card to use. event.type employment or school -->
-  <div class="content">
-    <!-- Title is the Timeframe-->
-    <p class="timeframe">{timeframe}</p>
-    <!-- Display Company or School name -->
-    <h2 class="header">{header}</h2>
-    <!-- Display Role -->
-    <p class="role">{role}</p>
-
-    <!-- Small foot note -->
-    <p class="footnote">Hover for more information.</p>
-
-    <!-- Reverse side of Card -->
-    <div class="card back">
+  <div class={type}>
+    <div class="content">
+      <!-- Title is the Timeframe-->
+      <p class="timeframe">{timeframe}</p>
       <!-- Display Company or School name -->
       <h2 class="header">{header}</h2>
-      <!-- Display Location -->
-      <p class="location">{location}</p>
-      <!-- Display Phone Number -->
-      <p class="phone">{phone}</p>
-      <!-- Content -->
-      <p class="content">{content}</p>
+      <!-- Display Role -->
+      <p class="role">{role}</p>
+
+      <!-- Small foot note -->
+      <p class="footnote">Hover for more information.</p>
+
+      <!-- Reverse side of Card -->
+      <div class="card back">
+        <!-- Display Company or School name -->
+        <h2 class="header">{header}</h2>
+        <!-- Display Location -->
+        <p class="location">{location}</p>
+        <!-- Display Phone Number -->
+        <p class="phone">{phone}</p>
+        <!-- Content -->
+        <p class="content">{content}</p>
+      </div>
     </div>
   </div>
 </div>
