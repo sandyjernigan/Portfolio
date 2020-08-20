@@ -34,35 +34,82 @@ export const info = {
     }
   },
   portfolio: {
-    projects: [
+    projects1: [
       {
         link: "http://www.sandyjernigan.com",
         header: "Portfolio",
         projectList: [
-          "made using Svelte"
+          "SVELTE",
+          "HTML",
+          "CSS",
+          "JS"
         ],
         bgStyle: "background-image: url(./img/projects/portfolio.png);",
         description: "This project was made using Svelte.",
-        additional: "Portfolio"
+        github: "https://github.com/sandyjernigan/Portfolio",
+        additional: "This site is made using <a href=\"https://svelte.dev/\">Svelte</a>"
       },
       {
-        link: "",
-        header: "Introduction to User Interface",
+        link: "https://pt6-propman.herokuapp.com/",
+        header: "Property Manager Backend",
         projectList: [
-          ""
+          "Team Building",
+          "React",
+          "Node",
+          "Express",
+          "PostgreSQL",
+          "Testing"
         ],
-        bgStyle: "",
-        description: ""
+        bgStyle: "background-image: url(./img/projects/propman.png);",
+        description: "This was created with a team of Lambda students for a Property Manager Website and has new members are contiuning to update.",
+        github: "https://github.com/Lambda-School-Labs/property-manager-be",
       },
       {
-        link: "",
-        header: "Introduction to User Interface",
+        link: "https://sandyjernigan.github.io/weddingplanner/index.html",
+        header: "Wedding Planner",
         projectList: [
-          ""
+          "HTML",
+          "CSS",
+          "JS"
         ],
-        bgStyle: "",
-        description: ""
+        bgStyle: "background-image: url(./img/projects/weddingplanner.png);",
+        description: "This is a basic landing page website created using just HTML, CSS, and Javascript.",
+        github: "https://github.com/sandyjernigan/weddingplanner",
       }
+    ],
+    projects2: [
+      {
+        link: "https://blissful-fermi-0d3142.netlify.app/",
+        header: "Event Planner",
+        projectList: [
+          "React"
+        ],
+        bgStyle: "background-image: url(./img/projects/eventplanner.png);",
+        description: "This site was created using React.",
+        github: "https://github.com/build-corporate-event-planner/Front-end",
+      },
+      {
+        link: "https://planthepotluck.herokuapp.com/",
+        header: "Potluck Planner Backend",
+        projectList: [
+          "Node.js",
+          "Express"
+        ],
+        bgStyle: "background-image: url(./img/projects/potluck.png);",
+        description: "This is the backend page. The page describes the endpoints available to use.",
+        github: "https://github.com/sandyjernigan/Backend",
+      },
+      {
+        link: "https://sandyjernigan.github.io/Sprint-Challenge--User-Interface/",
+        header: "Introduction to User Interface",
+        projectList: [
+          "HTML",
+          "CSS"
+        ],
+        bgStyle: "background-image: url(./img/projects/intro.jpg);",
+        description: "This page is an introduction to HTML and CSS sample website.",
+        github: "https://github.com/",
+      },
     ]
   },
   timeline: {

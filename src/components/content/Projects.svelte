@@ -5,16 +5,24 @@
 	export let projectList
 	export let bgStyle
 	export let description
+	export let github
 	export let additional
+	// Dark Mode
+	export let isDarkMode;
 </script>
 
-<div class="project">
+<div class="project" class:dark-mode={isDarkMode}>
+	<div class="github"><a href={github} target="_blank"><i class="fab fa-github"></i></a></div>
 	<a href={link} target="_blank">
 		<div class="content-inner fl-wrap">
 			<div class="content-front">
 				<div class="cf-inner">
 					<div class="bg" style={bgStyle}></div>
 					<div class="overlay"></div>
+				</div>
+			</div>
+			<div class="content-back">
+				<div class="cf-inner">
 					<div class="inner">
 						<h2>{header}</h2>
 						<ul>
@@ -22,30 +30,60 @@
 							<li>{item}</li>
 							{/each}
 						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="content-back">
-				<div class="cf-inner">
-					<div class="inner">
-						<p>{description}</p>
-						<div class="serv">{additional}</div>
+						<div class="serv">{description}</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- <p>{@html additional}</p> -->
 	</a>
 </div>
 
 <style>
 	.project {
 		flex-basis: 30%;
+		flex-wrap: wrap;
+		padding: 10px;
+	}
+	.github {
+		position: relative;
+		top: 1.7rem;
+		left: -46%;
+		font-size: 2rem;
+		text-shadow: -1px -1px 3px #fff;
+		z-index: 99;
+	}
+	.github i {
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.8);
+	}
+	.dark-mode .github i {
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.6);
+		box-shadow: -2px 2px #888888;
+	}
+	.dark-mode .github {
+		color: var(--darkcolorbase);
+		text-shadow: -1px -1px 3px #000;
+	}
+	a {
+		color: var(--colorbase);
+	}
+	a:visited{
+		color: var(--colorbase);
+	}
+	.dark-mode a {
+		color: var(--darkcolorbase);
+	}
+	.dark-mode a:visited {
+		color: var(--darkcolorbase);
 	}
 	.content-front:nth-child(2):after {
 		content: '';
 	}
 	.content-inner {
 		min-width: 250px;
+		max-height: 300px;
 		color: #fff;
 		position: relative;
 		transform-style: preserve-3d;
@@ -89,7 +127,7 @@
 		position: absolute;
 		width: 50px;
 		height: 50px;
-		border-color: rgba(255, 255, 255, 0.4);
+		border-color: rgba(255, 255, 255, 0.6);
 		z-index: 10;
 	}
 	.cf-inner:before {
@@ -106,10 +144,8 @@
 		height: 100%;
 		z-index: 1;
 		background-size: cover;
-		background-attachment: scroll;
 		background-position: center;
-		background-repeat: repeat;
-		background-origin: content-box;
+		background-repeat: no-repeat;
 	}
 	.overlay {
 		position: absolute;
@@ -118,7 +154,7 @@
 		width: 100%;
 		height: 100%;
 		background: #000;
-		opacity: 0.4;
+		opacity: 0.2;
 		z-index: 3;
 	}
 	.cf-inner:after {
@@ -134,7 +170,7 @@
 		padding: 150px 20px;
 	}
 	.content-inner .cf-inner .inner {
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 0.5);
 		align-items: stretch;
 		transform-style: preserve-3d;
 		perspective: 1000px;
@@ -142,7 +178,7 @@
 		transform: translateZ(95px) scale(0.81);
 		text-align: center;
 		position: relative;
-		padding: 8px;
+		padding: 10px;
 		z-index: 2;
 	}
 	.content-inner .cf-inner .inner h2 {
@@ -151,7 +187,7 @@
 		font-weight: 800;
 		padding-bottom: 20px;
 	}
-	.content-inner .cf-inner .inner h2:before {
+	/* .content-inner .cf-inner .inner h2:before {
 		content: "";
 		position: absolute;
 		left: 50%;
@@ -160,8 +196,8 @@
 		height: 2px;
 		margin-left: -10px;
 		background: #00bcd4;
-	}
-	.content-inner .content-front li {
+	} */
+	.content-inner li {
 		display: inline-block;
 		color: #fff;
 		text-transform: uppercase;
@@ -203,10 +239,10 @@
 		z-index: 10;
 	}
 	.content-back .cf-inner:before {
-		top: 125px;
+		top: 100px;
 	}
 	.content-back .cf-inner:after {
-		bottom: 125px;
+		bottom: 100px;
 	}
 
 </style>

@@ -1,6 +1,6 @@
 <script>  
   // Set Primary Color
-  export let bgColor = "235,237,239"
+  export let bgColor = "207,222,236"
 
 	// Check for Dark Mode
   // export let isDarkMode;

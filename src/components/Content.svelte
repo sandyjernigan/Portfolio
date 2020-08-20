@@ -15,7 +15,7 @@
 		{ selectComponent: 'timeline', component: Timeline, contents: info.timeline },
 		{ selectComponent: 'references', component: References, contents: info.references },
 	]
-	let selected = options[1];
+	let selected = options[0];
 	
 </script>
 

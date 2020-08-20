@@ -4,7 +4,8 @@
 	import Projects from "./Projects.svelte"
 
 	// list of projects
-	export let projects;
+	export let projects1;
+	export let projects2;
 
 	// Dark Mode
 	export let isDarkMode;
@@ -14,13 +15,17 @@
 <div class:dark-mode={isDarkMode}>
 
 	<h1>Projects</h1>
-
-	<p>This site is made using <a href="https://svelte.dev/">Svelte</a>.
+	<p>See the code on Github (click the Github icon) <br /> or Select to go to the project.</p>
 
 	<div class="projects">
-		{#each projects as project}
-			<Projects {...project} />
-		{/each}		
+		{#each projects1 as project}
+			<Projects {...project} {isDarkMode}/>
+		{/each}
+	</div>
+	<div class="projects">
+		{#each projects2 as project}
+			<Projects {...project} {isDarkMode}/>
+		{/each}
 	</div>
 
 </div>
@@ -31,10 +36,15 @@
 		padding-top: 20vh;
 		color: var(--colorbase);
 	}
-	p {
+	h1 {
 		filter: grayscale(50%);
 		font-weight: bold;
 		font-size: 2rem;
+	}
+	p {
+		filter: grayscale(50%);
+		margin-top: 10px;
+		font-size: 1.1rem;
 	}
 	.dark-mode {
 		color: var(--darkcolorbase);
