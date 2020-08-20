@@ -6,7 +6,7 @@
 	export let bgStyle
 	export let description
 	export let github
-	export let additional
+	// export let additional
 	// Dark Mode
 	export let isDarkMode;
 </script>

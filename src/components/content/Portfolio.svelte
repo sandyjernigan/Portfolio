@@ -49,9 +49,9 @@
 	.dark-mode {
 		color: var(--darkcolorbase);
 	}
-	.dark-mode a {
+	/* .dark-mode a {
 		color: var(--darkcolorbase);
-	}
+	} */
 	.projects {
 		display: flex;
 		justify-content: space-between;
