@@ -25,7 +25,7 @@
 		position: fixed;
 		right: 20px;
 		top: 10px;
-		z-index: 1;
+		z-index: 99;
 		
 	}
 	button.dark-mode {

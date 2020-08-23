@@ -34,7 +34,7 @@ export const info = {
     }
   },
   portfolio: {
-    projects1: [
+    projects: [
       {
         link: "http://www.sandyjernigan.com",
         header: "Portfolio",
@@ -75,9 +75,7 @@ export const info = {
         bgStyle: "background-image: url(./img/projects/weddingplanner.png);",
         description: "This is a basic landing page website created using just HTML, CSS, and Javascript.",
         github: "https://github.com/sandyjernigan/weddingplanner",
-      }
-    ],
-    projects2: [
+      },
       {
         link: "https://blissful-fermi-0d3142.netlify.app/",
         header: "Event Planner",

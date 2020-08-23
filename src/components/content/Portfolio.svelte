@@ -4,8 +4,7 @@
 	import Projects from "./Projects.svelte"
 
 	// list of projects
-	export let projects1;
-	export let projects2;
+	export let projects;
 
 	// Dark Mode
 	export let isDarkMode;
@@ -18,23 +17,42 @@
 	<p>See the code on Github (click the Github icon) <br /> or Select to go to the project.</p>
 
 	<div class="projects">
-		{#each projects1 as project}
+		{#each projects as project}
 			<div class="project">
 			<Projects {...project} {isDarkMode}/>
 			</div>
 		{/each}
 	</div>
-	<div class="projects">
+	<!-- <div class="projects">
 		{#each projects2 as project}
+			<div class="project">
 			<Projects {...project} {isDarkMode}/>
+			</div>
 		{/each}
-	</div>
+	</div> -->
 
 </div>
 
 <style>
 	.portfolio {
+		top: 0;
 		padding-top: 30vh;
+		overflow-x: scroll;
+	}
+	@media (max-width: 500px) {
+		.portfolio {
+			padding-top: 10vh;
+		}
+	}
+		/* Hide scrollbar for Chrome, Safari and Opera */
+	.portfolio::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.portfolio {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
 	}
 	div {
 		width: 100%;
@@ -58,30 +76,33 @@
 	} */
 	.projects {
 		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
-		padding-top:2vh;
-		max-height: 300px;
+		/* max-height: 300px; */
 	}
 	/* @media (max-width: 1024px) {
 		.projects {
 			max-height: 240px;
 		}
 	} */
-
-	/* custom-cursor */
-	/* =============================================================================================== */
-	/* .custom-cursor {
-		width: 3rem;
-		height: 3rem;
-		border: 1px solid hsla(0, 0%, 100%, .7);
-		border-radius: 100%;
-		background: hsla(0, 0%, 80%, .2);
-		position: absolute;
-		z-index: 5;
-		transform: translate(-50%, -50%);
-		pointer-events: none;
-	} */
+	.project {
+		flex-basis: 31%;
+		padding: 1%;
+		border: 1px solid black;
+	}
+	@media (max-width: 1040px) {
+		.project {
+			flex-basis: 45%;
+		}
+	}
+	@media (max-width: 620px) {
+		.project {
+			flex-basis: 98%;
+			width: 98%;
+		}
+	}
 
   /*Shrinking for mobile*/
   @media (max-width: 768px) {

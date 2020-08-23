@@ -41,9 +41,7 @@
 
 <style>
 	.project {
-		flex-basis: 30%;
-		flex-wrap: wrap;
-		padding: 10px;
+		width: 100%;
 	}
 	.github {
 		position: relative;
@@ -51,7 +49,7 @@
 		left: -46%;
 		font-size: 2rem;
 		text-shadow: -1px -1px 3px #fff;
-		z-index: 99;
+		z-index: 5;
 	}
 	.github i {
 		border-radius: 50%;
