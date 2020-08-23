@@ -11,10 +11,12 @@
 <div class="timeline" class:dark-mode={isDarkMode}></div>
 
 <div class="events" class:dark-mode={isDarkMode}>
+  <h1>Work and School History</h1>
+  <p>Hover over event for more information.</p>
   <!-- Loop thru timeline from info.js -->
   {#each timeline as year}
-  <!-- Display Title or Year -->
-  <div class="year"><h2>{year.year}</h2></div>
+    <!-- Display Title or Year -->
+    <div class="year"><h2>{year.year}</h2></div>
 
     <!-- Loop thru year, get each event in that year -->
     {#each year.events as details}
@@ -29,10 +31,9 @@
   * {
     box-sizing: border-box;
   }
-  .dark-mode div {
+  .dark-mode {
     color: var(--darkcolorbase);
   }
-
   .events {
     position: fixed;
     max-width: 1000px;
@@ -45,6 +46,29 @@
   }
   .events::-webkit-scrollbar {
     display: none;
+  }
+  .events h1 {
+    padding-top: 8%;
+    color: var(--colorbase);
+    opacity: 1;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 1px 1px 5px var(--colorbg), 0 0 25px var(--colorbg), -1px -1px 5px var(--purple), 0 0 20px var(--colorbg);
+  }
+  .dark-mode .events h1, .dark-mode .events p {
+    color: var(--darkprimarycolor);
+    filter: brightness(150%);
+    text-shadow: 1px 1px 5px black, 0 0 25px var(--darkpurple), -1px -1px 5px var(--darkcolorbg), 0 0 10px var(--darkcolorbg);
+  }
+  .events p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--colorbase);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px 5px var(--colorbg), 0 0 25px var(--colorbg), -1px -1px 5px var(--purple), 0 0 20px var(--colorbg);
   }
 
   /* The actual timeline (the vertical ruler) */

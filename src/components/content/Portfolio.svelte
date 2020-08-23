@@ -12,14 +12,16 @@
 
 </script>
 
-<div class:dark-mode={isDarkMode}>
+<div class="portfolio" class:dark-mode={isDarkMode}>
 
 	<h1>Projects</h1>
 	<p>See the code on Github (click the Github icon) <br /> or Select to go to the project.</p>
 
 	<div class="projects">
 		{#each projects1 as project}
+			<div class="project">
 			<Projects {...project} {isDarkMode}/>
+			</div>
 		{/each}
 	</div>
 	<div class="projects">
@@ -31,9 +33,11 @@
 </div>
 
 <style>
+	.portfolio {
+		padding-top: 30vh;
+	}
 	div {
 		width: 100%;
-		padding-top: 20vh;
 		color: var(--colorbase);
 	}
 	h1 {
@@ -56,8 +60,14 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		padding-top:5vh;
+		padding-top:2vh;
+		max-height: 300px;
 	}
+	/* @media (max-width: 1024px) {
+		.projects {
+			max-height: 240px;
+		}
+	} */
 
 	/* custom-cursor */
 	/* =============================================================================================== */
