@@ -90,7 +90,6 @@
 	.project {
 		flex-basis: 31%;
 		padding: 1%;
-		border: 1px solid black;
 	}
 	@media (max-width: 1040px) {
 		.project {

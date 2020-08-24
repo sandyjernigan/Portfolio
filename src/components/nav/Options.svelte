@@ -7,14 +7,22 @@
 	export let isDarkMode;
   import { option } from './options.js';
 
-	function selectOption() {
-		option.update(n => "title");
-	}
+	// function selectOption(opt) {
+	// 	option.update(value => opt);
+	// }
+
+	// function selectPort(opt) {
+	// 	option.update(value => "portfolio");
+	// }
 
 </script>
 
-<div class="options" on:click={selectOption} class:dark-mode={isDarkMode}>
-  <button>Liquid Fill</button>
+<div class="options" on:click={selectOption("title")} class:dark-mode={isDarkMode}>
+  <button>Title</button>
+</div>
+
+<div class="options" on:click={selectPort("portfolio")} class:dark-mode={isDarkMode}>
+  <button>Portfolio</button>
 </div>
 
 <style type="text/scss">
@@ -26,9 +34,6 @@
 		border-radius: 4px;
 		padding: 0.5rem;
 		text-transform: uppercase;
-		position: fixed;
-		right: 20px;
-		top: 10px;
 		z-index: 1;
 		
     padding: 25px 50px;
