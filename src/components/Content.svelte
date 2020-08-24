@@ -2,8 +2,8 @@
 	import { afterUpdate } from 'svelte';
 	import { Title, Portfolio, Skills, Timeline, References } from './content/index.js';
 	import Section from './Section.svelte';
-  import Options from "./nav/Options.svelte";
-	import ScrollHome from './nav/ScrollHome.svelte';
+  // import Options from "./nav/Options.svelte";
+	// import ScrollHome from './nav/ScrollHome.svelte';
 	import { info } from '../info.js';
 	import { option } from './nav/options.js'
 	export let isDarkMode;
@@ -62,7 +62,7 @@
    <div id="footer">This page is still in progress. More content to come ...</div>
 	</Section>
 
-	<ScrollHome />
+	<!-- <ScrollHome /> -->
 
 </div>
 
@@ -76,12 +76,12 @@
     padding: 0 11% 0 2%;
 	}
 	.selection {
-		position: absolute;
-		top: 80px;
+		position: fixed;
+		top: 50px;
 		right: 5px;
 		z-index: 99;
 		display: flex;
-		flex-direction: column;
+		/* flex-direction: column; */
 	}
 	#footer {
 		height: 500px;
@@ -102,7 +102,7 @@
     border-radius: 999px;
     border: 5px solid #284cff;
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
     white-space: nowrap;
     color: #fff;

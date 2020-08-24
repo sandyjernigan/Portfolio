@@ -36,7 +36,7 @@
 <style>
 	.portfolio {
 		top: 0;
-		padding-top: 30vh;
+		padding-top: 10vh;
 		overflow-x: scroll;
 	}
 	@media (max-width: 500px) {
