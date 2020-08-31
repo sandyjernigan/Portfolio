@@ -102,7 +102,7 @@
     border-radius: 999px;
     border: 5px solid #284cff;
     font-family: monospace;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
     white-space: nowrap;
     color: #fff;
@@ -110,10 +110,10 @@
     background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
     background-repeat: repeat-x;
     background-position: 0 -100%;
-    transition: 1.5s ease;
+    transition: 3s ease;
   }
   button:hover {
-    background-position: 500% 100%;
+    background-position: 100% 100%;
   }
 	.dark-mode button {
 		background-color: var(--darkcolorbg);

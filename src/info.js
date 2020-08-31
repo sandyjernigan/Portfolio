@@ -3,6 +3,7 @@ export const info = {
 		name: "Sandy Jernigan",
     title: "Full-Stack Web Developer",
     profileImg: "img/Profile.jpg",
+    resume: "https://resume.creddle.io/resume/8g8ohwid7pe",
     github: "https://github.com/sandyjernigan",
     linkedin: "https://www.linkedin.com/in/sdj1983",
     facebook: "https://www.facebook.com/sjernigan",
@@ -61,7 +62,7 @@ export const info = {
           "Testing"
         ],
         bgStyle: "background-image: url(./img/projects/propman.png);",
-        description: "This was created with a team of Lambda students for a Property Manager Website and has new members are contiuning to update.",
+        description: "This was created with a team of Lambda students for a Property Manager Website and has new members are continuing to update.",
         github: "https://github.com/Lambda-School-Labs/property-manager-be",
       },
       {

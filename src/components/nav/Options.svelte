@@ -25,8 +25,7 @@
   <button>Portfolio</button>
 </div>
 
-<style type="text/scss">
-	
+<style type="text/scss">	
 	button {
 		background-color: var(--colorbg);
 		color: var(--colorbase);
