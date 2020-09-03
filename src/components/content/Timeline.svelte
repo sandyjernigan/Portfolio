@@ -12,7 +12,7 @@
 
 <div class="events" class:dark-mode={isDarkMode}>
   <h1>Work and School History</h1>
-  <p>Hover over event for more information.</p>
+  <!-- <p>Hover over event for more information.</p> -->
   <!-- Loop thru timeline from info.js -->
   {#each timeline as year}
     <!-- Display Title or Year -->

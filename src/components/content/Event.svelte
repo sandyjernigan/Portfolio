@@ -24,7 +24,7 @@
       <p class="role">{role}</p>
 
       <!-- Small foot note -->
-      <p class="footnote">Hover for more information.</p>
+      <!-- <p class="footnote">Hover for more information.</p> -->
 
       <!-- Reverse side of Card -->
       <div class="card back">
