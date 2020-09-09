@@ -15,16 +15,19 @@
 <div class="container left" class:dark-mode={isDarkMode}>
   <!-- Type will determine style of card to use. event.type employment or school -->
   <div class={type}>
-    <div class="content">
-      <!-- Title is the Timeframe-->
-      <p class="timeframe">{timeframe}</p>
-      <!-- Display Company or School name -->
-      <h2 class="header">{header}</h2>
-      <!-- Display Role -->
-      <p class="role">{role}</p>
+    <div class="flip-card">
 
-      <!-- Small foot note -->
-      <!-- <p class="footnote">Hover for more information.</p> -->
+      <div class="card front">
+        <!-- Title is the Timeframe-->
+        <p class="timeframe">{timeframe}</p>
+        <!-- Display Company or School name -->
+        <h2 class="header">{header}</h2>
+        <!-- Display Role -->
+        <p class="role">{role}</p>
+
+        <!-- Small foot note -->
+        <!-- <p class="footnote">Hover for more information.</p> -->
+      </div>
 
       <!-- Reverse side of Card -->
       <div class="card back">
@@ -49,25 +52,8 @@
     position: relative;
     background-color: inherit;
     width: 45%;
+    perspective: 1000px;
   }
-
-  /* The circles on the timeline */
-  /* .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -1px;
-    background-color: var(--colorbase);
-    border: 4px solid var(--green);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 0;
-  }
-  .dark-mode.container::after {
-    background-color: var(--darkcolorbase);
-    border: 4px solid var(--orange);
-  } */
 
   /* Place the container to the left */
   .container:nth-child(odd) {
@@ -119,20 +105,56 @@
   } */
 
   /* The actual content */
-  .content {
+  .flip-card {
     padding: 20px 30px;
     color: var(--colorbg);
     background-color: var(--colorbase);
     position: relative;
     border-radius: 6px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
   }
-  .dark-mode .content {
+  .dark-mode .flip-card {
     color: var(--darkcolorbg);
     background-color: var(--darkcolorbase);
   }
 
+  /* Flip Card Effect */
+  .container:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
   .back {
-    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotateY(180deg);
+  }
+
+  /* Format Card */
+  .front {
+    padding: 30px;
+  }
+  .timeframe {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .header {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .role {
+    font-size: 1.5rem;
+    padding-top: 10px;
+  }
+  .location, .phone {
+    font-size: 1.2rem;
+    padding: 1px;
   }
 
   /* Media queries - Responsive timeline on screens less than 600px wide */
