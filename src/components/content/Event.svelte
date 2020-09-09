@@ -26,7 +26,7 @@
         <p class="role">{role}</p>
 
         <!-- Small foot note -->
-        <!-- <p class="footnote">Hover for more information.</p> -->
+        <p class="footnote">Hover for more information.</p>
       </div>
 
       <!-- Reverse side of Card -->
@@ -151,6 +151,9 @@
   .role {
     font-size: 1.5rem;
     padding-top: 10px;
+  }
+  .footnote {
+    padding-top: 20px;
   }
   .location, .phone {
     font-size: 1.2rem;
