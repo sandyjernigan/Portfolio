@@ -62,7 +62,7 @@ export const info = {
           "Testing"
         ],
         bgStyle: "background-image: url(./img/projects/propman.png);",
-        description: "This was created with a team of Lambda students for a Property Manager Website and has new members are continuing to update.",
+        description: "This was created with a team for a Property Manager Website and has new members are continuing to update.",
         github: "https://github.com/Lambda-School-Labs/property-manager-be",
       },
       {
