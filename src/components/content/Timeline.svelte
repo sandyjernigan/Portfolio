@@ -58,17 +58,10 @@
     white-space: nowrap;
     text-shadow: 1px 1px 5px var(--colorbg), 0 0 25px var(--colorbg), -1px -1px 5px var(--purple), 0 0 20px var(--colorbg);
   }
-  .dark-mode .events h1, .dark-mode .events p {
+  .dark-mode .events h1 {
     color: var(--darkprimarycolor);
     filter: brightness(150%);
     text-shadow: 1px 1px 5px black, 0 0 25px var(--darkpurple), -1px -1px 5px var(--darkcolorbg), 0 0 10px var(--darkcolorbg);
-  }
-  .events p {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: var(--colorbase);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 1px 1px 5px var(--colorbg), 0 0 25px var(--colorbg), -1px -1px 5px var(--purple), 0 0 20px var(--colorbg);
   }
 
   /* The actual timeline (the vertical ruler) */
@@ -135,7 +128,14 @@
   @media screen and (max-width: 600px) {
     /* Place the timelime to the left */
     .timeline::after {
-    left: 31px;
+      left: 10px;
+    }
+    
+    .events h1 {
+      font-size: 2.2em;
+    }
+    div.year h2 {
+      font-size: 2em;
     }
   }
 
