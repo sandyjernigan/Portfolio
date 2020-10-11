@@ -122,7 +122,11 @@ export const info = {
             location: "Raleigh, NC",
             phone: "800-688-6696",
             role: "Internal Control Analyst",
-            content: "Review multiple meterics to ensure that all required tasks are completed to meet service-level agreements, and convert these reports into readable formats for display and verification that all required agreements were met or generate documentation if any are not met."
+            description: [
+              "Review multiple meterics to ensure that all required tasks are completed to meet service-level agreements.",
+              "Convert these reports into readable formats for display and verification that all required agreements were met or generate documentation if any are not met."
+            ],
+            content: ""
           }
         ]
       },
