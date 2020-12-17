@@ -6,13 +6,18 @@
   export let location;
   export let phone;
   export let role;
-  export let content;
+  // export let content;
+  export let description;
 
   // Right or Left Side: True for Left, False for Right
   let rightorleft = true;
 </script>
 
 <div class="container left" class:dark-mode={isDarkMode}>
+
+          {#each description as descriptionTxt}
+            <li>test</li>
+          {/each}
   <!-- Type will determine style of card to use. event.type employment or school -->
   <div class={type}>
     <div class="flip-card">
@@ -38,7 +43,6 @@
         <!-- Display Phone Number -->
         <p class="phone">{phone}</p>
         <!-- Content -->
-        <p class="content">{content}</p>
       </div>
     </div>
   </div>

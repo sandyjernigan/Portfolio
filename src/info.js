@@ -15,23 +15,28 @@ export const info = {
     explainer: "Hover",
     lefter: {
       text: "HTML/CSS",
-      image: "./img/logo/html5.svg"
+      image: "./img/logo/html5.svg",
+      url: ""
     },
     left: {
       text: "Javascript",
-      image: "./img/logo/js.png"
+      image: "./img/logo/js.png",
+      url: ""
     },
     center: {
       text: "Svelte",
-      image: "./img/logo/svelte.svg"
+      image: "./img/logo/svelte.svg",
+      url: ""
     },
     right: {
       text: "React",
-      image: "./img/logo/react.png"
+      image: "./img/logo/react.png",
+      url: ""
     },
     righter: {
       text: "Python",
-      image: "./img/logo/python.png"
+      image: "./img/logo/python.png",
+      url: ""
     }
   },
   portfolio: {
