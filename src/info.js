@@ -16,27 +16,27 @@ export const info = {
     lefter: {
       text: "HTML/CSS",
       image: "./img/logo/html5.svg",
-      url: ""
+      url: "https://github.com/sandyjernigan/weddingplanner"
     },
     left: {
       text: "Javascript",
       image: "./img/logo/js.png",
-      url: ""
+      url: "https://github.com/sandyjernigan/Sprint-Challenge-Applied-Javascript"
     },
     center: {
       text: "Svelte",
       image: "./img/logo/svelte.svg",
-      url: ""
+      url: "https://github.com/sandyjernigan/Portfolio"
     },
     right: {
       text: "React",
       image: "./img/logo/react.png",
-      url: ""
+      url: "https://github.com/sandyjernigan/Sprint-Challenge-Redux-Smurfs"
     },
     righter: {
       text: "Python",
       image: "./img/logo/python.png",
-      url: ""
+      url: "https://github.com/sandyjernigan/Sprint-Challenge--Data-Structures-Python/tree/sandy-jernigan"
     }
   },
   portfolio: {
@@ -144,7 +144,12 @@ export const info = {
             location: "Raleigh, NC",
             phone: "800-688-6696",
             role: "Lead Technician",
-            content: "In addition to the Pharmacy Technician role, this job requires leadership, ability to train new employees, ability to organize daily and weekly performance reports into readable formats, and multi-tasking skills to monitor queue to ensure that performance metrics are met."
+            content: ", .",
+            description: [
+              "In addition to the Pharmacy Technician role, this job requires leadership and ability to train new employees.",
+              "Organize daily and weekly performance reports into readable formats.",
+              "Multi-tasking skills to monitor queue to ensure that performance metrics are met."
+            ],
           }
         ]
       },
@@ -157,7 +162,9 @@ export const info = {
             location: "Raleigh, NC",
             phone: "919-874-0009",
             role: "Pharmacy Technician",
-            content: "DataStaff (Temp Agency for job with GDIT): this converted into the position at GDIT."
+            description: [
+              "DataStaff (Temp Agency for job with GDIT): this converted into the position at GDIT.",
+            ],
           }, 
           {
             type: "employment",
@@ -166,7 +173,9 @@ export const info = {
             location: "Benson, NC",
             phone: "919-207-0744",
             role: "Lead Technician",
-            content: "Worked as a Pharmacy Technician and Produce Assistant."
+            description: [
+              "Worked as a Pharmacy Technician and Produce Assistant.",
+            ],
           }
         ]
       },
@@ -179,7 +188,12 @@ export const info = {
             location: "Smithfield, NC",
             phone: "919-894-2810",
             role: "Independent Representative of Aflac",
-            content: "Interviewed prospective clients. Processed applications, payments, corrections, endorsements and cancellations. Pursued continuing education and training programs to continue professional development. Evaluated insurance claims to verify authenticity and validity."
+            description: [
+              "Interviewed prospective clients.",
+              "Processed applications, payments, corrections, endorsements and cancellations.",
+              "Pursued continuing education and training programs to continue professional development.",
+              "Evaluated insurance claims to verify authenticity and validity."
+            ]
           },
           {
             type: "employment",
@@ -188,7 +202,10 @@ export const info = {
             location: "Garner, NC",
             phone: "919-772-6450",
             role: "Lead Technician",
-            content: "Support the Pharmacy Manager by coordinating the daily tasks and supervising other technicians. Training new employees and reviewing new procedures with staff as released."
+            description: [
+              "Support the Pharmacy Manager by coordinating the daily tasks and supervising other technicians.",
+              "Training new employees and reviewing new procedures with staff as released."
+            ]
           }
         ]
       },
@@ -200,7 +217,11 @@ export const info = {
             header: "PhazeThree",
             location: "Benson, NC",
             role: "Office Manager",
-            content: "Increased revenue and Managed the office. Assisted with updating websites (used php to repair issues). Answered phone calls, offered computer advice, technical support, coordinated on-site and off-site computer repair, and managed ingoing and outgoing invoices. Supported the office as a computer technician by working on computers both at the customers’ home and at store location."
+            description: [
+              "Increased revenue, managed the office, and supported the office as a computer technician by working on computers both at the customers’ home and at store location.",
+              "Assisted with updating websites (used php to repair issues).",
+              "Answered phone calls, offered computer advice, technical support, coordinated on-site and off-site computer repair, and managed ingoing and outgoing invoices."
+            ]
           }
         ]
       },
@@ -212,7 +233,10 @@ export const info = {
             header: "Wake Technical Community College",
             location: "Raleigh, NC",
             role: "Two Associate Degrees",
-            content: "Associate of Science and Associate in Internet Technologies"
+            description: [
+              "Associate of Science",
+              "Associate in Internet Technologies"
+            ]
           }
         ]
       },
@@ -225,7 +249,10 @@ export const info = {
             location: "Benson, NC",
             phone: "919-894-1887",
             role: "Veterinary Technician",
-            content: "Assist vet in treating animals. Also, as the stock specialist, verified products were on hand."
+            description: [
+              "Assist vet in treating animals.",
+              "Also, as the stock specialist, verified products were on hand."
+            ]
           }
         ]
       },
@@ -237,7 +264,9 @@ export const info = {
             header: "South Johnston High School",
             location: "Four Oaks, NC",
             role: "High School Diploma",
-            content: "The Chapter FFA Leadership Award, 11th Grade Top FFA member, Special Recognition for Natural Resources Management, Special Recognition for Human Antinomy and Philology, and National Honors Society member."
+            description: [
+              "The Chapter FFA Leadership Award, 11th Grade Top FFA member, Special Recognition for Natural Resources Management, Special Recognition for Human Antinomy and Philology, and National Honors Society member.",
+            ]
           }
         ]
       }
@@ -251,6 +280,11 @@ export const info = {
       //       location: "city, NC",
       //       phone: "number",
       //       role: "role",
+            // description: [
+            //   "test",
+            //   "test",
+            //   "test"
+            // ],
       //       content: "content"
       //     }
       //   ]

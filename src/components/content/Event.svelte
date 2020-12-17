@@ -7,7 +7,8 @@
   export let phone;
   export let role;
   // export let content;
-  export let description;
+  export let description = [];
+  let contentTxt = "content" + description.length
 
   // Right or Left Side: True for Left, False for Right
   let rightorleft = true;
@@ -15,9 +16,6 @@
 
 <div class="container left" class:dark-mode={isDarkMode}>
 
-          {#each description as descriptionTxt}
-            <li>test</li>
-          {/each}
   <!-- Type will determine style of card to use. event.type employment or school -->
   <div class={type}>
     <div class="flip-card">
@@ -41,8 +39,18 @@
         <!-- Display Location -->
         <p class="location">{location}</p>
         <!-- Display Phone Number -->
-        <p class="phone">{phone}</p>
+        {#if phone}
+          <p class="phone">{phone}</p>
+        {/if}
         <!-- Content -->
+        <div class="content">
+          <!-- {#if description.length > 3 } -->
+          <ul class={contentTxt}>
+            {#each description as descriptionTxt}
+              <li>{descriptionTxt}</li>
+            {/each}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -152,6 +160,23 @@
   .role {
     font-size: 1.5rem;
     padding-top: 10px;
+  }
+  .content ul {
+    padding-left: 20px;
+  }
+  .content li {
+    text-align: left;
+    padding-top: 0.4em;
+    list-style-type: disc;
+  }
+  .content1 li {
+    padding-top: 1.5em;
+  }
+  .content2 li {
+    padding-top: 1em;
+  }
+  .content3 li {
+    padding-top: 0.5em;
   }
   .footnote {
     padding-top: 20px;

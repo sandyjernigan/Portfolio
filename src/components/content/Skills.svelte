@@ -11,29 +11,37 @@
   export let righter;
   export let isDarkMode;
 
+	function handleClick(ahref) {
+		window.location.href = ahref;
+	}
 </script>
 
 <section class:dark-mode={isDarkMode}>
   <h1>My Skills include...</h1>
   <div class="skills" class:dark-mode={isDarkMode}>
     {#if lefter}
-      <div class="lefter" style="background-image:url({lefter.image})">
+      <div class="lefter" style="background-image:url({lefter.image})" on:click="{handleClick(lefter.url)}">
         {#if lefter.text} <div class="text">{lefter.text}</div> {/if}
       </div>
     {/if}
-    <div class="left" style="background-image:url({left.image})">
+
+    <div class="left" style="background-image:url({left.image})" on:click="{handleClick(left.url)}">
         {#if left.text} <div class="text">{left.text}</div> {/if}
     </div>
-    <div class="center" style="background-image:url({center.image})">
+    
+    <div class="center" style="background-image:url({center.image})" on:click="{handleClick(center.url)}">
       <div class="explainer"><span>{explainer}</span></div>
         {#if center.text} <div class="text">{center.text}</div> {/if}
       </div>
-    <div class="right" style="background-image:url({right.image})">
+
+    <div class="right" style="background-image:url({right.image})" on:click="{handleClick(right.url)}">
         {#if right.text} <div class="text">{right.text}</div> {/if}
     </div>
-    <div class="righter" style="background-image:url({righter.image})">
+
+    <div class="righter" style="background-image:url({righter.image})" on:click="{handleClick(righter.url)}">
         {#if righter.text} <div class="text">{righter.text}</div> {/if}
     </div>
+
   </div>
 </section>
 
