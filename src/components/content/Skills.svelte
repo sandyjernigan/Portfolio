@@ -18,6 +18,7 @@
 
 <section class:dark-mode={isDarkMode}>
   <h1>My Skills include...</h1>
+  <p>Hover to see skills, and click on skill to go to a github sample.</p><br />
   <div class="skills" class:dark-mode={isDarkMode}>
     {#if lefter}
       <div class="lefter" style="background-image:url({lefter.image})" on:click="{handleClick(lefter.url)}">
@@ -60,6 +61,9 @@
 		padding: 1rem 2rem;
 	}
   .dark-mode h1 {
+    color: var(--darkcolorbase);
+  }
+  .dark-mode p {
     color: var(--darkcolorbase);
   }
   .skills {
